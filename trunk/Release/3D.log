@@ -1,0 +1,118 @@
+﻿La génération a démarré 09/10/2011 14:12:58.
+     1>Projet "E:\GAMAGORA\duff-si\3D.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Mise à jour de l'horodatage "Release\3D.unsuccessfulbuild".
+       ClCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GAMAGORA\duff-si\Release\3D.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\3D.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\GAMAGORA\duff-si\Release\3D.pdb" /TLBID:1 /DYNAMICBASE:NO /FIXED:NO /MACHINE:X86 Release\blend.obj
+         Release\blob.obj
+         Release\blobblend.obj
+         Release\blobvertex.obj
+         Release\box.obj
+         Release\opengl.obj
+         Release\quad.obj
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.logic_error) : (0x0200001b).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.domain_error) : (0x0200001e).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.invalid_argument) : (0x0200001f).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.length_error) : (0x02000020).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.out_of_range) : (0x02000021).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.runtime_error) : (0x02000022).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.overflow_error) : (0x02000023).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.underflow_error) : (0x02000024).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.range_error) : (0x02000025).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._Locinfo) : (0x02000027).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (lconv) : (0x0200002a).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (_Locimp) : (0x0200002d).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.ios_base) : (0x02000037).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (failure) : (0x02000038).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_istream<char,std::char_traits<char> >) : (0x0200003c).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_istream<wchar_t,std::char_traits<wchar_t> >) : (0x0200003f).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ios<char,std::char_traits<char> >) : (0x02000052).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ios<wchar_t,std::char_traits<wchar_t> >) : (0x02000053).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ostream<char,std::char_traits<char> >) : (0x02000054).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ostream<wchar_t,std::char_traits<wchar_t> >) : (0x02000057).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_iostream<char,std::char_traits<char> >) : (0x0200005a).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_iostream<wchar_t,std::char_traits<wchar_t> >) : (0x0200005b).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._String_val<char,std::allocator<char> >) : (0x0200005e).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._String_val<wchar_t,std::allocator<wchar_t> >) : (0x02000064).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.logic_error) : (0x0200001a).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.domain_error) : (0x0200001d).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.invalid_argument) : (0x0200001e).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.length_error) : (0x0200001f).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.out_of_range) : (0x02000020).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.runtime_error) : (0x02000021).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.overflow_error) : (0x02000022).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.underflow_error) : (0x02000023).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.range_error) : (0x02000024).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._Locinfo) : (0x02000026).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (lconv) : (0x02000029).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (_Locimp) : (0x0200002c).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.ios_base) : (0x02000036).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (failure) : (0x02000037).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_istream<char,std::char_traits<char> >) : (0x0200003b).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_istream<wchar_t,std::char_traits<wchar_t> >) : (0x0200003e).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ios<char,std::char_traits<char> >) : (0x02000053).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ios<wchar_t,std::char_traits<wchar_t> >) : (0x02000054).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ostream<char,std::char_traits<char> >) : (0x02000055).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_ostream<wchar_t,std::char_traits<wchar_t> >) : (0x02000058).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_iostream<char,std::char_traits<char> >) : (0x0200005b).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std.basic_iostream<wchar_t,std::char_traits<wchar_t> >) : (0x0200005c).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._String_val<char,std::allocator<char> >) : (0x0200005f).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (8013118D) : Informations de disposition incohérentes dans des types dupliqués (std._String_val<wchar_t,std::allocator<wchar_t> >) : (0x02000065).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000c0).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000c4).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000cb).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000f6).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000f9).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00010c).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000111).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000118).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00011f).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000170).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000175).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00017e).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000183).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000196).
+     1>opengl.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0001ad).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000bc).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000c4).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000c9).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000f3).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0000f7).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000108).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00010d).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000117).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00011a).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000175).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c00017c).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000182).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000187).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c000199).
+     1>quad.obj : error LNK2022: échec de l'opération sur les métadonnées (80131195) : Les attributs personnalisés ne sont pas cohérents : (0x0c0001b1).
+     1>blend.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0?$allocator@D@std@@$$FQAE@ABV01@@Z' (06000105) a des métadonnées qui ne sont pas cohérentes avec (0A00017D) dans quad.obj
+     1>blend.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0?$allocator@D@std@@$$FQAE@ABV01@@Z' (06000105) a des métadonnées qui ne sont pas cohérentes avec (0A000188) dans opengl.obj
+     1>blend.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0?$allocator@_W@std@@$$FQAE@ABV01@@Z' (06000156) a des métadonnées qui ne sont pas cohérentes avec (0A0001CF) dans quad.obj
+     1>blend.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0?$allocator@_W@std@@$$FQAE@ABV01@@Z' (06000156) a des métadonnées qui ne sont pas cohérentes avec (0A0001DA) dans opengl.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??3@$$FYAXPAX@Z' (060000F5) a des métadonnées qui ne sont pas cohérentes avec (0A00026C) dans quad.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??3@$$FYAXPAX@Z' (060000F5) a des métadonnées qui ne sont pas cohérentes avec (0A00028E) dans opengl.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??_V@$$FYAXPAX@Z' (060000F6) a des métadonnées qui ne sont pas cohérentes avec (0A000279) dans quad.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??_V@$$FYAXPAX@Z' (060000F6) a des métadonnées qui ne sont pas cohérentes avec (0A00029C) dans opengl.obj
+     1>box.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0Box@@$$FQAE@ABVVector@@0@Z' (060000B7) a des métadonnées qui ne sont pas cohérentes avec (0A0002C0) dans opengl.obj
+     1>blobvertex.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0BlobVertex@@$$FQAE@ABVVector@@ABN1@Z' (060000BC) a des métadonnées qui ne sont pas cohérentes avec (0A0002DB) dans opengl.obj
+     1>blobblend.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0BlobBlend@@$$FQAE@PAVBlobNode@@0@Z' (060000BB) a des métadonnées qui ne sont pas cohérentes avec (0A0002E1) dans opengl.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0exception@std@@$$FQAE@ABV01@@Z' (060000F8) a des métadonnées qui ne sont pas cohérentes avec (0A0002E3) dans quad.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0exception@std@@$$FQAE@ABV01@@Z' (060000F8) a des métadonnées qui ne sont pas cohérentes avec (0A000312) dans opengl.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??1exception@std@@$$FUAE@XZ' (060000F9) a des métadonnées qui ne sont pas cohérentes avec (0A0002E7) dans quad.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??1exception@std@@$$FUAE@XZ' (060000F9) a des métadonnées qui ne sont pas cohérentes avec (0A000316) dans opengl.obj
+     1>blob.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??0Blob@@$$FQAE@PAVBlobNode@@ABN@Z' (060000C0) a des métadonnées qui ne sont pas cohérentes avec (0A000325) dans opengl.obj
+     1>blob.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '?Gradient@Blob@@$$FQBE?AVVector@@ABV2@@Z' (060000C3) a des métadonnées qui ne sont pas cohérentes avec (0A000326) dans opengl.obj
+     1>blob.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '?Polygonize@Blob@@$$FQAEXVBox@@HPAVVector@@PAHAAH3ABN@Z' (060000C6) a des métadonnées qui ne sont pas cohérentes avec (0A000327) dans opengl.obj
+     1>LINK : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '??_U@$$FYAPAXI@Z' (060000FA) a des métadonnées qui ne sont pas cohérentes avec (0A0002BF) dans quad.obj
+     1>blob.obj : error LNK2034: métadonnées incohérentes avec la table de symboles COFF : le symbole '?Intensity@Blob@@$$FQBENABVVector@@@Z' (060000C5) a des métadonnées qui ne sont pas cohérentes avec (0A0002F4) dans quad.obj
+     1>LINK : fatal error LNK1255: l'édition de liens a échoué à cause d'erreurs de métadonnées
+     1>Génération du projet "E:\GAMAGORA\duff-si\3D.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:00.29
