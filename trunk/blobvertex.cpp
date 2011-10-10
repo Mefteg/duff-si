@@ -2,7 +2,7 @@
 // Changelog 05.01.24
 
 // Blob include
-#include "blob.h"
+#include "blobVertex.h"
 
 /*!
 \brief Create a point skeletal element.
@@ -28,4 +28,20 @@ double BlobVertex::Intensity(const Vector& p)
 
   double r=u*u;
   return blend(r);
+}
+
+void BlobMove::UpdateBox(const Vector& c, const double& r){
+	// maj la box avec les nouveaux attributs
+	box = Box(c,r);
+	//remonter vers le père pour maj sa box qui peut avoir changée
+	father->UpdateBox();
+}
+
+//Effectuer les déplacements de la goutte
+void BlobMove::Update(){
+	
+	c += Vector(0.0,-1.0,0.0);
+
+	//mettre a jour la box en conséquence des changements effectués
+	UpdateBox(c,blend.R);
 }

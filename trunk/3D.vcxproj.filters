@@ -46,5 +46,17 @@
     <ClInclude Include="vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BlobNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blobVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blobBlend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

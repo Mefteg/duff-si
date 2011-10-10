@@ -103,7 +103,11 @@
     <ClCompile Include="quad.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="blend.h" />
     <ClInclude Include="blob.h" />
+    <ClInclude Include="blobBlend.h" />
+    <ClInclude Include="BlobNode.h" />
+    <ClInclude Include="blobVertex.h" />
     <ClInclude Include="box.h" />
     <ClInclude Include="opengl.h" />
     <ClInclude Include="vector.h" />
