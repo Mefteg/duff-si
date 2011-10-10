@@ -2,7 +2,7 @@
 // Changelog 05.01.24
 
 // Self include
-#include "blob.h"
+#include "blend.h"
 
 /*!
 \brief Creates a cubic polynomial potential function.

@@ -15,6 +15,8 @@ using namespace std;
 #include <vector>
 #include <list>
 
+//parametre de l'intensité
+float param = 0.5;
 // Identifiant d'un cube
 GLuint cube;
 
@@ -108,13 +110,10 @@ void GenerateBlob()
 
   blob=new Blob(
     new BlobBlend(
-		new BlobVertex(Vector(0.0,3.0,0.0),3.0,3.0),
-		new BlobBlend(
-			new BlobMove(Vector(3.0,0.0,0.0),6.0,1.0),
-			new BlobVertex(Vector(-3.0,0.0,0.0),6.0,1.0))
-    )
+		new BlobMove(Vector(0.0,10.0,-20.0),6.0,1.0),
+		new BlobVertex(Vector(0.0,1.0,-20.0),6.0,3.0))
     ,
-    0.5);
+    param);
 
   GenerateTriangles();
 }
@@ -167,10 +166,29 @@ void Keyboard(unsigned char key, int x, int y)
 
   }
 
+  //augmentation du parametre
+  if ((key=='x') || (key=='X'))
+  {
+	param+=0.1;
+	GenerateBlob();
+    GenerateCut(blob);
+	cube = GenerateTriangles();
+  }
+  if ((key=='w') || (key=='W'))
+  {
+	param-=0.1;
+	GenerateBlob();
+    GenerateCut(blob);
+	cube = GenerateTriangles();
+  }
+
+  //update
   if ((key=='u') || (key=='U'))
   {
 	  blob->element->Update();
-	  GenerateTriangles();
+	  GenerateCut(blob);
+	  cube = GenerateTriangles();
+	  printf("%f\n",blob->element->box.a.y);
   }
 
   glutPostRedisplay();
@@ -208,11 +226,11 @@ void GlutRendering()
 
   glTranslatef(0.0f,0.0f,-20.0f);	
 
-  if (rotate2)
+  /*if (rotate2)
   {
     alpha+=0.95;
   }
-  glRotatef(alpha,1.0f,1.0f,1.0f);
+  glRotatef(alpha,1.0f,1.0f,1.0f);*/
 
 
   if (blobby)
@@ -307,7 +325,7 @@ void InitGlut(int width,int height)
   //glEnable(GL_CULL_FACE);
   GenerateBlob();
   cube=GenerateTriangles();
-  cut=GenerateCut(blob);
+  //cut=GenerateCut(blob);
 
 }
 

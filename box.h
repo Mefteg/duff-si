@@ -9,9 +9,10 @@
 
 class Box
 { 
-protected:
-  Vector a,b; //!< End vertices of the box.
+  
 public:
+  Vector a,b; //!< End vertices of the box.
+
   //! Creates a generic box (empty).
   Box() {}
   Box(const Vector&);
