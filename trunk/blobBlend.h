@@ -16,6 +16,7 @@ public:
   double Intensity(const Vector&);
   virtual void Update();
   void UpdateBox();
+  virtual void SetColliders(std::vector<Blob*> * b);
 };
 
 //********************UNION**************************
