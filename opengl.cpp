@@ -24,7 +24,7 @@ GLuint cube;
 GLuint cut;
 
 // Blob
-Blob* blob;
+std::vector<Blob*> blobs;
 
 Vector av[10000000];
 Vector an[10000000];
@@ -71,33 +71,37 @@ GLuint GenerateCut(Blob* blob)
 
 GLuint GenerateTriangles(){
 
-
-  Box box=blob->GetBox().Cubic();
-  blob->Polygonize(box,75,av,at,avn,atn,1e-4);
-
-  for (int i=0;i<avn;i++)
-  {
-    an[i]=-blob->Gradient(av[i]);
-    an[i]/=Norm(an[i]);
-  }
-
   GLuint list=glGenLists(1);
   // Optimize list
   glNewList(list,GL_COMPILE);
 
   GlutShade(0.5,0.7,0.6);
+  
+  std::vector<Blob*>::iterator it = blobs.begin();
+  while(it!=blobs.end()){
+	  Box box=(*it)->GetBox().Cubic();
+	  (*it)->Polygonize(box,75,av,at,avn,atn,1e-4);
 
-  glBegin(GL_TRIANGLES);
-  for (int i=0; i < atn; i++)
-  {
-    Normal3D(an[at[i*3+0]]);
-    Vertex3D(av[at[i*3+0]]);
-    Normal3D(an[at[i*3+1]]);
-    Vertex3D(av[at[i*3+1]]);
-    Normal3D(an[at[i*3+2]]);
-    Vertex3D(av[at[i*3+2]]);
+	  for (int i=0;i<avn;i++)
+	  {
+		an[i]=-(*it)->Gradient(av[i]);
+		an[i]/=Norm(an[i]);
+	  }
+
+	  glBegin(GL_TRIANGLES);
+	  for (int i=0; i < atn; i++)
+	  {
+		Normal3D(an[at[i*3+0]]);
+		Vertex3D(av[at[i*3+0]]);
+		Normal3D(an[at[i*3+1]]);
+		Vertex3D(av[at[i*3+1]]);
+		Normal3D(an[at[i*3+2]]);
+		Vertex3D(av[at[i*3+2]]);
+	  }
+	  glEnd();
+
+	  it++;
   }
-  glEnd();
 
   // Fin de la liste
   glEndList();
@@ -107,17 +111,30 @@ GLuint GenerateTriangles(){
 
 void GenerateBlob()
 {
-
-  blob=new Blob(
-    new BlobBlend(
-		new BlobMove(Vector(0.0,10.0,-20.0),6.0,1.0),
-		new BlobVertex(Vector(0.0,1.0,-20.0),6.0,3.0))
+  
+  Blob * blob=new Blob(
+		new BlobVertex(Vector(0.0,1.0,-20.0),6.0,3.0)
     ,
     param);
+
+  Blob * blob2 = new Blob(new BlobMove(Vector(0.0,10.0,-20.0),6.0,1.0),param);
+
+  blobs.push_back(blob);
+  blobs.push_back(blob2);
+
+  blob->SetColliders(&blobs);
+  blob2->SetColliders(&blobs);
 
   GenerateTriangles();
 }
 
+void UpdateBlobs(){
+	std::vector<Blob*>::iterator it = blobs.begin();
+	while(it!=blobs.end()){
+		(*it)->element->Update();
+		it++;
+	}
+}
 
 // Gestion du clavier.
 void Keyboard(unsigned char key, int x, int y)
@@ -156,13 +173,13 @@ void Keyboard(unsigned char key, int x, int y)
   if (key=='+')
   {
     cutpos+=Vector(0.0,0.0,0.1);
-    cut=GenerateCut(blob);
+    //cut=GenerateCut(blob);
 
   }
   if (key=='-')
   {
     cutpos-=Vector(0.0,0.0,0.1);
-    cut=GenerateCut(blob);
+    //cut=GenerateCut(blob);
 
   }
 
@@ -171,24 +188,23 @@ void Keyboard(unsigned char key, int x, int y)
   {
 	param+=0.1;
 	GenerateBlob();
-    GenerateCut(blob);
+    //GenerateCut(blob[0]);
 	cube = GenerateTriangles();
   }
   if ((key=='w') || (key=='W'))
   {
 	param-=0.1;
 	GenerateBlob();
-    GenerateCut(blob);
+    //GenerateCut(blob);
 	cube = GenerateTriangles();
   }
 
   //update
   if ((key=='u') || (key=='U'))
   {
-	  blob->element->Update();
-	  GenerateCut(blob);
+	  UpdateBlobs();
+	  GenerateCut(blobs[0]);
 	  cube = GenerateTriangles();
-	  printf("%f\n",blob->element->box.a.y);
   }
 
   glutPostRedisplay();

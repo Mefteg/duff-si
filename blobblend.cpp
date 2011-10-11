@@ -25,6 +25,12 @@ BlobBlend::BlobBlend(BlobNode* a,BlobNode* b)
   box=Box(elements[0]->GetBox(),elements[1]->GetBox());
 }
 
+void BlobBlend::SetColliders(std::vector<Blob*> * b){
+	colliders = b;
+	elements[0]->SetColliders(colliders);
+	elements[1]->SetColliders(colliders);
+}
+
 /*!
 \brief Destroys a blending node.
 */

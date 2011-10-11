@@ -7,6 +7,7 @@
 #include "BlobNode.h"
 #include "blobBlend.h"
 #include "blobVertex.h"
+#include <vector>
 
 class Blob;
 
@@ -17,6 +18,7 @@ class Blob
 public:
 	double threshold;  //!< Threshold value.
   BlobNode* element;//!< Root node.
+  std::vector<Blob*> * colliders;
   Blob(BlobNode* =NULL,const double& =0.5);
 
   virtual ~Blob();
@@ -29,6 +31,8 @@ public:
 
   Vector Dichotomy(Vector a,Vector b,double va,double vb,double length,const double& epsilon) const;
   void Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& nt,const double& epsilon);
+
+  void SetColliders(std::vector<Blob*> * b);
 
   Box GetBox() const { return element->GetBox();}; 
     

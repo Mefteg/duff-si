@@ -93,6 +93,19 @@ double Blob::Intensity(const Vector& p) const
   return element->Intensity(p)-threshold;
 }
 
+//COLLISION PROCESS
+void Blob::SetColliders(std::vector<Blob *> * b){
+	colliders = new std::vector<Blob*>;
+	//faire une boucle et ajouter tous les pointers vers blob sauf this
+	std::vector<Blob*>::iterator it = b->begin();
+	while(it!=b->end()){
+		if((*it)!=this)
+			colliders->push_back((*it));
+		it++;
+	}
+	element->SetColliders(colliders);
+}
+
 /*! 
 \brief Compute the polygonization of the Blob.
 \param box Box defining the domain.
