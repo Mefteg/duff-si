@@ -28,6 +28,7 @@ public:
 
   double Intensity(const Vector&) const;
   Vector Gradient(const Vector&) const;
+  void AddChild(BlobNode * node);
 
   Vector Dichotomy(Vector a,Vector b,double va,double vb,double length,const double& epsilon) const;
   void Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& nt,const double& epsilon);

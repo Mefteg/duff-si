@@ -106,6 +106,28 @@ void Blob::SetColliders(std::vector<Blob *> * b){
 	element->SetColliders(colliders);
 }
 
+void Blob::AddChild(BlobNode * n){
+	bool inserted = false;
+	BlobNode * current = element;
+
+	if(element->isLeaf()){
+		BlobBlend * b = new BlobBlend(element,b);
+		element =b;
+		inserted = true;
+	}
+	
+	while(!inserted){
+		if(current->isLeaf()){
+			BlobBlend * b = new BlobBlend(element,b);
+			current->father->elements[0] =b;
+			inserted = true;
+		}else{
+			current = current->elements[0];
+		}
+	}
+}
+
+
 /*! 
 \brief Compute the polygonization of the Blob.
 \param box Box defining the domain.

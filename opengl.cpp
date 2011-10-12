@@ -17,6 +17,8 @@ using namespace std;
 
 //parametre de l'intensité
 float param = 0.5;
+//booleen pour jouer l'"anim"
+bool play =false;
 // Identifiant d'un cube
 GLuint cube;
 
@@ -117,11 +119,12 @@ void GenerateBlob()
     ,
     param);
 
-  Blob * blob2 = new Blob(new BlobMove(Vector(0.0,10.0,-20.0),6.0,1.0),param);
+  Blob * blob2 = new Blob(new BlobMove(Vector(0.2,10.0,-20.0),6.0,1.0),param);
 
   blobs.push_back(blob);
   blobs.push_back(blob2);
 
+  //passer la liste des blobs pour les tests de collisions
   blob->SetColliders(&blobs);
   blob2->SetColliders(&blobs);
 
@@ -145,6 +148,13 @@ void Keyboard(unsigned char key, int x, int y)
     glutDestroyWindow(window); 
     exit(0);
   }
+
+  // Si Espace
+  if (key==32)
+  {
+    play = !play;
+  }
+
   // Gestion des lumieres
   if ((key=='l') || (key=='L'))
   {
@@ -279,6 +289,13 @@ void GlutIdle(void)
 {
   // Augmentation du parametre de temps
   t+=1.0;
+  //jouer le flim
+  if(play){
+	//lancer la mise à jour des blobs
+	UpdateBlobs();
+	//regénérer les éléments à afficher 
+	cube = GenerateTriangles();
+  }
   GlutRendering();
 }
 

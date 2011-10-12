@@ -15,6 +15,7 @@ BlobVertex::BlobVertex(const Vector& c,const double& r,const double& s)
   BlobVertex::blend=Blend(r,s);
   box=Box(c,r);
   father=NULL;
+  elements[0] = NULL; elements[1] = NULL;
 }
 
 /*!
@@ -44,7 +45,7 @@ void BlobMove::UpdateBox(const Vector& c, const double& r){
 //Effectuer les déplacements de la goutte
 void BlobMove::Update(){
 	//q est la prochaine position du blob
-	Vector q = c + Vector(0,-1,0);
+	Vector q = c + Vector(0,-0.5,0);
 	
 	//vérifier si il n'est pas dans un autre blob
 	checkCollisions(q);
@@ -54,19 +55,25 @@ void BlobMove::Update(){
 }
 
 
-void BlobMove::checkCollisions(Vector & p){
+bool BlobMove::checkCollisions(Vector & p){
 	
 	//on parcourt la structure des collisions possibles
 	std::vector<Blob*>::iterator it = colliders->begin();
 	while(it!=colliders->end()){
 		//if f(p)>0;
+		if( (*it)->Intensity(p)<0){
+			it++;
+			continue;
+		}
+		//calculer le gradient : vecteur vers la surface
 		Vector g = (*it)->Gradient(p);
-
+		//point à l'extérieur de la surface
 		Vector o = p - g;
-
-		p= (*it)->Dichotomy(p,o,1,1,1,0.01);
-
-		break;
+		//trouver par dichotomie un point sur la surface entre o et p
+		p= (*it)->Dichotomy(p,o,(*it)->Intensity(p),(*it)->Intensity(o),Norm(p-o),0.0001);
+		
+		return true;
 	}
+	return false;
 }
 

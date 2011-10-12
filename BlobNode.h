@@ -14,6 +14,7 @@ class BlobNode {
 public:
   Box box;  //!< Bounding box of the node.
   BlobNode * father; //node one level up
+  BlobNode* elements[2]; //!< Set of blending elements.
   std::vector<Blob*> * colliders;
 
   BlobNode() {}
@@ -21,6 +22,7 @@ public:
 
   //! Compute the intensity of the field function at a given point in space.
   virtual double Intensity(const Vector&)=0;
+  bool isLeaf(){ return (elements[0]==NULL && elements[1]==NULL);}; 
 
   
   void SetBox(const Vector& c, const double& r){box = Box(c,r);};
