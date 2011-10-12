@@ -24,6 +24,7 @@ public:
 //******************Moving vertex************************************
 class BlobMove:public BlobVertex{
 public:
+	Vector previousPosition;
 	BlobMove(const Vector& v,const double& b,const double&s):BlobVertex(v,b,s){};
 	virtual void Update();
 	virtual void UpdateBox(const Vector& c, const double& r);

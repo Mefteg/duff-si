@@ -113,13 +113,14 @@ GLuint GenerateTriangles(){
 
 void GenerateBlob()
 {
-  
-  Blob * blob=new Blob(
-		new BlobVertex(Vector(0.0,1.0,-20.0),6.0,3.0)
+  //Sphere(s)
+  Blob * blob=new Blob( new BlobBlend( 
+						new BlobVertex(Vector(0.0,-10.0,-40.0),10.0,8.0),
+						new BlobVertex(Vector(5.0,-10.0,-35.0),3.0,8.0) )
     ,
     param);
-
-  Blob * blob2 = new Blob(new BlobMove(Vector(0.2,10.0,-20.0),6.0,1.0),param);
+  //goutte
+  Blob * blob2 = new Blob(new BlobMove(Vector(2.0,10.0,-37.5),2.0,1.0),param);
 
   blobs.push_back(blob);
   blobs.push_back(blob2);

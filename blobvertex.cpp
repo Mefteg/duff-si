@@ -71,7 +71,8 @@ bool BlobMove::checkCollisions(Vector & p){
 		Vector o = p - g;
 		//trouver par dichotomie un point sur la surface entre o et p
 		p= (*it)->Dichotomy(p,o,(*it)->Intensity(p),(*it)->Intensity(o),Norm(p-o),0.0001);
-		
+		//ajouter une érosion
+		(*it)->AddChild(new BlobVertex(c,this->blend.R,-0.04));
 		return true;
 	}
 	return false;

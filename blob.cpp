@@ -108,21 +108,28 @@ void Blob::SetColliders(std::vector<Blob *> * b){
 
 void Blob::AddChild(BlobNode * n){
 	bool inserted = false;
+	//pointeur sur le noeud courant
 	BlobNode * current = element;
-
-	if(element->isLeaf()){
-		BlobBlend * b = new BlobBlend(element,b);
+	//si la racine est une feuille
+	if(current->isLeaf()){
+		//créer un nouveau bloblend
+		BlobBlend * b = new BlobBlend(current,n);
+		//allouer la nouvelle racine
 		element =b;
 		inserted = true;
 	}
 	
 	while(!inserted){
+		//garder un pointeur sur le père
+		BlobNode * temp = current;
+		//choisir un fils
+		current = current->elements[0];
+		//si le noeud est une feuille
 		if(current->isLeaf()){
-			BlobBlend * b = new BlobBlend(element,b);
-			current->father->elements[0] =b;
+			//créer un nouveau noeud père
+			BlobBlend * b = new BlobBlend(current,n);
+			temp->elements[0] =b;
 			inserted = true;
-		}else{
-			current = current->elements[0];
 		}
 	}
 }

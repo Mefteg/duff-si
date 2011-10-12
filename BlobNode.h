@@ -22,7 +22,7 @@ public:
 
   //! Compute the intensity of the field function at a given point in space.
   virtual double Intensity(const Vector&)=0;
-  bool isLeaf(){ return (elements[0]==NULL && elements[1]==NULL);}; 
+  bool isLeaf(){ fprintf(stderr,"de");bool f= (elements[0]==NULL && elements[1]==NULL);fprintf(stderr,"%d FER\n",f);return f;}; 
 
   
   void SetBox(const Vector& c, const double& r){box = Box(c,r);};
