@@ -1,10 +1,18 @@
-﻿La génération a démarré 11/10/2011 18:56:04.
+﻿La génération a démarré 12/10/2011 18:57:14.
      1>Projet "C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\3D.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\3D.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
-         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\Qt\3.3.2\Include /ID:\Code\Core\Include /Zi /nologo /W3 /WX- /Ox /Oy- /D NO_DEBUG /D WIN32 /D _USRDLL /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt blobvertex.cpp
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\Qt\3.3.2\Include /ID:\Code\Core\Include /Zi /nologo /W3 /WX- /Ox /Oy- /D NO_DEBUG /D WIN32 /D _USRDLL /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt blob.cpp blobblend.cpp blobvertex.cpp opengl.cpp quad.cpp
+         blob.cpp
+         Génération de code en cours...
+     1>c:\documents and settings\icom\mes documents\duff-si\duff-si\blob.cpp(114): warning C4700: variable locale 'b' non initialisée utilisée
+         Compilation en cours...
+         quad.cpp
+         opengl.cpp
          blobvertex.cpp
+         blobblend.cpp
+         Génération de code en cours...
        ManifestResourceCompile:
          Toutes les sorties sont à jour.
        Link:
@@ -29,4 +37,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.06
+Temps écoulé 00:00:03.65

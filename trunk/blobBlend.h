@@ -7,8 +7,7 @@
 class BlobBlend:public BlobNode
 {
 public:	
-  BlobNode* elements[2]; //!< Set of blending elements.
-  BlobNode * father;
+  
 
   BlobBlend(BlobNode*,BlobNode*);
 
