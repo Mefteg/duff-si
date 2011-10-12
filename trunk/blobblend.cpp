@@ -16,13 +16,13 @@
 BlobBlend::BlobBlend(BlobNode* a,BlobNode* b)
 {
 	father = NULL;
-  elements[0]=a; 
-  elements[1]=b;
+	elements[0]=a; 
+	elements[1]=b;
 
-  elements[0]->father = this;
-  elements[1]->father = this;
+	elements[0]->father = this;
+	elements[1]->father = this;
   
-  box=Box(elements[0]->GetBox(),elements[1]->GetBox());
+	box=Box(elements[0]->GetBox(),elements[1]->GetBox());
 }
 
 void BlobBlend::SetColliders(std::vector<Blob*> * b){
@@ -47,7 +47,7 @@ BlobBlend::~BlobBlend()
 \brief Computes the field value at a given point in space.
 */ 
 double BlobBlend::Intensity(const Vector& p)
-{  
+{ 
   // Box 
   if (!box.Inside(p)) return 0.0;
 
@@ -65,6 +65,8 @@ void BlobBlend::UpdateBox(){
 	if(father)father->UpdateBox();
 }
 
+
+//////////////////BOOLEENS////////////////////////:
 
 double BlobUnion::Intensity(const Vector& p)
 {  
