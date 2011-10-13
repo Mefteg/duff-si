@@ -126,7 +126,12 @@ void GenerateBlob()
     ,
     param);
   //goutte
-  Blob * blob2 = new Blob(new BlobMove(Vector(2.0,10.0,-37.5),1.5,1.0),param);
+  Blob * blob2 = new Blob( new BlobBlend(
+							new BlobBlend( 
+									new BlobMove(Vector(2.0,10.0,-37.5),1.5,1.0),
+									new BlobMove(Vector(2.0,11.0,-37.5),0.7,1.0) ),
+							new BlobVertex(Vector(2.0,11.0,-37.5),5.0,1.0) )
+				,param);
 
   blobs.push_back(blob);
   blobs.push_back(blob2);
@@ -134,6 +139,15 @@ void GenerateBlob()
   //passer la liste des blobs pour les tests de collisions
   blob->SetColliders(&blobs);
   blob2->SetColliders(&blobs);
+
+  //Simuler la scene
+  std::vector<Blob*>::iterator it = blobs.begin();
+  while(it!=blobs.end()){
+	  fprintf(stderr,"Simulation...\n");
+	  (*it)->Simulate(150);
+	  fprintf(stderr,"Done.\n");
+	  it++;
+  }
 
   GenerateTriangles();
 }
