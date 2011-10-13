@@ -5,6 +5,7 @@
 #include "box.h"
 #include "blend.h"
 
+#include <algorithm>
 #include <vector>
 
 class Blob;
@@ -17,12 +18,15 @@ public:
   BlobNode* elements[2]; //!< Set of blending elements.
   std::vector<Blob*> * colliders;
 
+  
   BlobNode() {}
   virtual ~BlobNode() {}
 
   //! Compute the intensity of the field function at a given point in space.
   virtual double Intensity(const Vector&)=0;
-  bool isLeaf(){ fprintf(stderr,"de");bool f= (elements[0]==NULL && elements[1]==NULL);fprintf(stderr,"%d FER\n",f);return f;}; 
+  bool isLeaf(){ return (elements[0]==NULL && elements[1]==NULL);}; 
+  int CountElements(){ if(!isLeaf()) return (elements[0]->CountElements() + elements[1]->CountElements()); return 1;};
+  int GetLength(){ if(!isLeaf()) return (max(elements[0]->GetLength() , elements[1]->GetLength()) +1 ); return 1; };
 
   
   void SetBox(const Vector& c, const double& r){box = Box(c,r);};

@@ -123,12 +123,13 @@ void Blob::AddChild(BlobNode * n){
 		//garder un pointeur sur le père
 		BlobNode * temp = current;
 		//choisir un fils
-		current = current->elements[0];
+		int ind = ( current->elements[0]->GetLength() <= current->elements[1]->GetLength() )?0:1;
+		current = current->elements[ind];
 		//si le noeud est une feuille
 		if(current->isLeaf()){
 			//créer un nouveau noeud père
 			BlobBlend * b = new BlobBlend(current,n);
-			temp->elements[0] =b;
+			temp->elements[ind] =b;
 			inserted = true;
 		}
 	}
