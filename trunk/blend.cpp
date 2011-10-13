@@ -17,8 +17,7 @@ Blend::Blend(const double& r,const double& s)
 }
 
 /*!
-\brief Computes the blending function intensity given a squared
-distance value.
+\brief Computes the blending function intensity given a squared distance value.
 */
 double Blend::operator()(const double& x) const
 {

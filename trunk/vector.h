@@ -88,6 +88,7 @@ public:
 
   // Norm
   friend double Norm(const Vector&);
+  friend Vector Normalized(const Vector&);
 };
 
 // Unary operators
@@ -254,5 +255,15 @@ inline Vector Orthogonal(const Vector& u)
   a[j]=-u[i];
   return a;
 }
+
+/*!
+\brief Compute the Euclidean norm of a vector.
+*/
+inline Vector Normalized(const Vector& u)
+{
+  return u/sqrt(u.x*u.x+u.y*u.y+u.z*u.z);
+}
+
+
 #endif
 

@@ -12,6 +12,10 @@ using namespace std;
 #include "vector.h"
 
 #include "blob.h"
+#include "blobbox.h"
+#include "blobedge.h"
+#include "blobdisk.h"
+
 #include "opengl.h"
 #include <vector>
 #include <list>
@@ -119,6 +123,7 @@ GLuint GenerateTriangles(){
 
 void GenerateBlob()
 {
+/*  
   //Sphere(s)
   Blob * blob=new Blob( new BlobBlend( 
 						new BlobVertex(Vector(0.0,-10.0,-40.0),10.0,8.0),
@@ -134,7 +139,12 @@ void GenerateBlob()
   //passer la liste des blobs pour les tests de collisions
   blob->SetColliders(&blobs);
   blob2->SetColliders(&blobs);
+*/
 
+  Blob* blob = new Blob(new BlobDisk(Vector(0, 0, 0), Vector(1, 1, 1), 2, 3, 2));
+  blobs.push_back(blob);
+  blob->SetColliders(&blobs);
+  
   GenerateTriangles();
 }
 
