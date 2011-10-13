@@ -2,6 +2,7 @@
 // Changelog 06.02.2002
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 #include "glut/glut.h"
@@ -14,7 +15,12 @@ using namespace std;
 #include "opengl.h"
 #include <vector>
 #include <list>
+#include "clock.h"
 
+std::ofstream fichier;
+int frame=0,mtime,timebase=0;
+//horloge
+Clock timer = Clock();
 //parametre de l'intensité
 float param = 0.5;
 //booleen pour jouer l'"anim"
@@ -120,7 +126,7 @@ void GenerateBlob()
     ,
     param);
   //goutte
-  Blob * blob2 = new Blob(new BlobMove(Vector(2.0,10.0,-37.5),2.0,1.0),param);
+  Blob * blob2 = new Blob(new BlobMove(Vector(2.0,10.0,-37.5),1.5,1.0),param);
 
   blobs.push_back(blob);
   blobs.push_back(blob2);
@@ -290,6 +296,8 @@ void GlutIdle(void)
 {
   // Augmentation du parametre de temps
   t+=1.0;
+  
+  timer.start();
   //jouer le flim
   if(play){
 	//lancer la mise à jour des blobs
@@ -298,6 +306,23 @@ void GlutIdle(void)
 	cube = GenerateTriangles();
   }
   GlutRendering();
+  //afficher la fps
+  frame++;
+	mtime=glutGet(GLUT_ELAPSED_TIME);
+	if (mtime - timebase > 1000) {
+		int n = blobs.front()->CountElements();
+		int l = blobs.front()->GetLength();
+		//afficher le nombre de blobs
+		fprintf(stderr, "TreeSize : %d ; NbBlobs = %d  | ",l,n);
+		fichier<<"s "<<l<<endl<<"b "<< n <<endl;
+		//afficher les fps
+		fprintf(stderr,"FPS:%4.2f\n",
+			frame*1000.0/(mtime-timebase));
+		fichier<< "f " << frame*1000.0/(mtime-timebase)<<endl;
+		timebase = mtime;		
+		frame = 0;
+	}
+
 }
 
 //!Initialise OpenGL
@@ -368,6 +393,7 @@ void InitGlut(int width,int height)
 
 int main(int argc,char **argv)
 {
+	fichier = std::ofstream("out.txt", std::ios::out | std::ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
   glutInit(&argc, argv);
 
   InitGlut(512,512);

@@ -13,32 +13,36 @@ class Blob;
 
 // ///////////////////Blobby shapes\\\\\\\\\\\\\\\\\\\\_____
 class Blob
-{
- 
+{ 
 public:
+	//nombre de feuilles de l'arbre
+	int nbElements;
+
 	double threshold;  //!< Threshold value.
-  BlobNode* element;//!< Root node.
-  std::vector<Blob*> * colliders;
-  Blob(BlobNode* =NULL,const double& =0.5);
+	BlobNode* element;//!< Root node.
+	std::vector<Blob*> * colliders;
+	Blob(BlobNode* =NULL,const double& =0.5);
 
-  virtual ~Blob();
+	virtual ~Blob();
 
-  //! Return the threshold value.
-  double Threshold() { return threshold; }
+	//! Return the threshold value.
+	double Threshold() { return threshold; }
 
-  double Intensity(const Vector&) const;
-  Vector Gradient(const Vector&) const;
-  void AddChild(BlobNode * node);
+	double Intensity(const Vector&) const;
+	Vector Gradient(const Vector&) const;
+	void AddChild(BlobNode * node);
+	int CountElements(){return element->CountElements();};
+	int GetLength(){return element->GetLength();};
 
-  Vector Dichotomy(Vector a,Vector b,double va,double vb,double length,const double& epsilon) const;
-  void Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& nt,const double& epsilon);
+	Vector Dichotomy(Vector a,Vector b,double va,double vb,double length,const double& epsilon) const;
+	void Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& nt,const double& epsilon);
 
-  void SetColliders(std::vector<Blob*> * b);
+	void SetColliders(std::vector<Blob*> * b);
 
-  Box GetBox() const { return element->GetBox();}; 
+	Box GetBox() const { return element->GetBox();}; 
     
 protected:
-  static int triTable[256][16];
+	static int triTable[256][16];
 };
 
 
