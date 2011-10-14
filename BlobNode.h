@@ -1,6 +1,8 @@
 #ifndef _BLOBNODE_H
 #define _BLOBNODE_H
 
+#include <stdlib.h>
+#include <stdio.h>
 #include "vector.h"
 #include "box.h"
 #include "blend.h"

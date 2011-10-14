@@ -16,7 +16,6 @@ BlobVertex::BlobVertex(const Vector& c,const double& r,const double& s)
   box=Box(c,r);
   father=NULL;
   elements[0] = NULL; elements[1] = NULL;
-  nbElements = 0;
 }
 
 /*!
