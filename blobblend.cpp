@@ -58,6 +58,10 @@ void BlobBlend::Update(){
 	elements[0]->Update();elements[1]->Update();
 }
 
+void BlobBlend::Simulate(int frames){
+	elements[0]->Simulate(frames);elements[1]->Simulate(frames);
+}
+
 void BlobBlend::UpdateBox(){
 	//mettre a jour les boxes des deux enfants
 	box = Box(elements[0]->GetBox(),elements[1]->GetBox());

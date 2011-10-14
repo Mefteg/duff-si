@@ -9,23 +9,23 @@
 #include <time.h>
 
 /*! \class Clock
-   * \brief classe representant une horloge
-   *  Gere une horloge
+   * \brief Represents a clock
    */
 class Clock 
 { 
 private: 
     clock_t st; 
 public: 
-	/*!\brief Constructeur
-     *  Constructeur de la classe Clock
+	/*!\brief Constructor
+     *  Constructor of class Clock
      */
 	Clock(){}; 
 	~Clock(){}; 
+	/*\brief Start the clock*/
     void start(){
 		st = clock();
 	};
-
+	/*\brief Get the time elapsed since the clock was started */
 	float getTime(){
 		return (clock()-st);	
 	}; 

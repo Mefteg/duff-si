@@ -10,7 +10,9 @@
 #include <vector>
 
 class Blob;
-
+/*! \class Blob
+   * \brief Represents a tree of BlobNodes
+   */
 // ///////////////////Blobby shapes\\\\\\\\\\\\\\\\\\\\_____
 class Blob
 { 
@@ -25,18 +27,25 @@ public:
 
 	virtual ~Blob();
 
-	//! Return the threshold value.
+	//! Returns the threshold value.
 	double Threshold() { return threshold; }
 
 	double Intensity(const Vector&) const;
 	Vector Gradient(const Vector&) const;
+	/*\brief adds a node in the blob tree and balances it*/
 	void AddChild(BlobNode * node);
+	/*\brief returns the number of leaves contained in the subtree under the node*/
 	int CountElements(){return element->CountElements();};
+	/*\brief Updates the length of the blob tree*/
 	int GetLength(){return element->GetLength();};
+
+	/*\brief Simulates the routes of the blob nodes for a given number of frames*/
+	void Simulate(int frames){element->Simulate(frames);};
 
 	Vector Dichotomy(Vector a,Vector b,double va,double vb,double length,const double& epsilon) const;
 	void Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& nt,const double& epsilon);
 
+	 /*\brief Sets the potential colliders of the scene with the  blob. Calls recursively this method on the nodes of the tree. */
 	void SetColliders(std::vector<Blob*> * b);
 
 	Box GetBox() const { return element->GetBox();}; 
