@@ -49,8 +49,14 @@ void BlobMove::Update(){
 		return;
 	c= (*iterSimu);
 	Blob * b;
-	if((*iterSimuColl))
+	if((*iterSimuColl)){
 		(*iterSimuColl)->AddChild(new BlobVertex(c,this->blend.R,-0.04));//ajouter une érosion*/
+		if(blend.R>0.02)
+			blend.R -=0.02;
+		else
+			iterSimu = simuPos.end();
+
+	}
 	
 	//mettre a jour la box en conséquence des changements effectués
 	UpdateBox(c,blend.R);
@@ -89,7 +95,7 @@ bool BlobMove::checkCollisions(Vector & p, Blob ** b){
 		//point à l'extérieur de la surface
 		Vector o = p - g;
 		//trouver par dichotomie un point sur la surface entre o et p
-		p= (*it)->Dichotomy(p,o,(*it)->Intensity(p),(*it)->Intensity(o),Norm(p-o),0.0001);
+		p= (*it)->Dichotomy(p,o,(*it)->Intensity(p),(*it)->Intensity(o),Norm(p-o),1e-4);
 		//retourner le blob en collision
 		*b= (*it);
 		

@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
+
 #include "glut/glut.h"
 #include <GL/gl.h>										
 #include <GL/glu.h>
@@ -19,6 +21,7 @@ using namespace std;
 
 std::ofstream fichier;
 int frame=0,mtime,timebase=0;
+int frameNumber=0;
 //horloge
 Clock timer = Clock();
 //parametre de l'intensité
@@ -59,6 +62,39 @@ int blobby=1;
 
 // Identifiant de fenetre
 int window;
+int width=512,height = 512;
+
+
+/* http://leri.univ-reims.fr/~bittar/cours/OpenGL/td13.html */
+
+void my_grab_ppm (const string & filename)
+{
+  int viewport [4];
+  glGetIntegerv (GL_VIEWPORT, viewport);
+
+  int larg = viewport [2]; if (larg & 1) ++larg; //Pour avoir des valeurs paires
+  int haut = viewport [3]; if (haut & 1) ++haut;
+  
+  ofstream file (filename.c_str (), ios::out|ios::binary);
+  if (! file)
+    cerr << "Cannot open file \"" << filename.c_str () << "\"!\n";
+  else
+    {
+      file << "P6\n#\n" << larg << ' ' << haut << "\n255\n";
+  
+      glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
+      char * pixels = new char [3 * larg * haut];
+      glReadPixels (0, 0, larg, haut, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+  
+      char * ppix = pixels + (3 * larg * (haut - 1));
+      for (unsigned int j = haut; j-- ; ppix -= 3 * larg) file.write (ppix, 3 * larg);
+  
+      delete[] pixels;
+      file.close ();
+    }
+
+  cout << "grabbed\n";
+} 
 
 
 GLuint GenerateCut(Blob* blob)
@@ -126,11 +162,9 @@ void GenerateBlob()
     ,
     param);
   //goutte
-  Blob * blob2 = new Blob( new BlobBlend(
-							new BlobBlend( 
-									new BlobMove(Vector(2.0,10.0,-37.5),1.5,1.0),
-									new BlobMove(Vector(2.0,11.0,-37.5),0.7,1.0) ),
-							new BlobVertex(Vector(2.0,11.0,-37.5),5.0,1.0) )
+  Blob * blob2 = new Blob( 
+									new BlobMove(Vector(-1.0,13.0,-37.5),1.5,1.0)
+									
 				,param);
 
   blobs.push_back(blob);
@@ -214,6 +248,12 @@ void Keyboard(unsigned char key, int x, int y)
 
   }
 
+  //Enregistrer la scene dans une image (hopefully)
+  if ((key=='i') || (key=='I'))
+  {
+	my_grab_ppm("images/image.ppm");
+  }
+	
   //augmentation du parametre
   if ((key=='x') || (key=='X'))
   {
@@ -289,6 +329,8 @@ void GlutRendering()
     glCallList(cut);
   }
   glutSwapBuffers();
+  
+  frameNumber++;
 }
 
 void MouseMove(int x, int y)
@@ -336,6 +378,14 @@ void GlutIdle(void)
 		timebase = mtime;		
 		frame = 0;
 	}
+	// créer un flux de sortie
+    std::ostringstream oss;
+    // écrire un nombre dans le flux
+    oss << frameNumber;
+    // récupérer une chaîne de caractères
+    std::string result = oss.str();
+	//Enregistrer la scene dans une image (hopefully)
+	//my_grab_ppm("images/image"+result+".ppm");
 
 }
 
@@ -402,15 +452,12 @@ void InitGlut(int width,int height)
 
 }
 
-
-
-
 int main(int argc,char **argv)
 {
 	fichier = std::ofstream("out.txt", std::ios::out | std::ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
   glutInit(&argc, argv);
 
-  InitGlut(512,512);
+  InitGlut(width , height);
   glutMainLoop();
   return 0;
 }
