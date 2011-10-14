@@ -44,18 +44,37 @@ void BlobMove::UpdateBox(const Vector& c, const double& r){
 
 //Effectuer les déplacements de la goutte
 void BlobMove::Update(){
-	//q est la prochaine position du blob
-	Vector q = c + Vector(0,-0.5,0);
+	//ne rien faire si on a atteint la fin des positions
+	if(iterSimu == simuPos.end() || iterSimuColl == simuColl.end())
+		return;
+	c= (*iterSimu);
+	Blob * b;
+	if((*iterSimuColl))
+		(*iterSimuColl)->AddChild(new BlobVertex(c,this->blend.R,-0.04));//ajouter une érosion*/
 	
-	//vérifier si il n'est pas dans un autre blob
-	checkCollisions(q);
-	c =q;
 	//mettre a jour la box en conséquence des changements effectués
 	UpdateBox(c,blend.R);
+	iterSimu++;
+	iterSimuColl++;
+}
+
+void BlobMove::Simulate(int frames){
+	//calculer et stocker les positions pour chaque frame
+	for(int i=0;i<frames;i++){
+		//q est la prochaine position du blob
+		Vector q = simuPos.back() + Vector(0,-0.5,0);
+		//vérifier si il n'est pas dans un autre blob
+		Blob * b = NULL;
+		checkCollisions(q,&b);
+		//ajouter le blob à la liste de collisions
+		simuColl.push_back(b);
+		//ajouter le point aux positions
+		simuPos.push_back(q);
+	}
 }
 
 
-bool BlobMove::checkCollisions(Vector & p){
+bool BlobMove::checkCollisions(Vector & p, Blob ** b){
 	
 	//on parcourt la structure des collisions possibles
 	std::vector<Blob*>::iterator it = colliders->begin();
@@ -71,8 +90,9 @@ bool BlobMove::checkCollisions(Vector & p){
 		Vector o = p - g;
 		//trouver par dichotomie un point sur la surface entre o et p
 		p= (*it)->Dichotomy(p,o,(*it)->Intensity(p),(*it)->Intensity(o),Norm(p-o),0.0001);
-		//ajouter une érosion
-		(*it)->AddChild(new BlobVertex(c,this->blend.R,-0.04));
+		//retourner le blob en collision
+		*b= (*it);
+		
 		return true;
 	}
 	return false;
