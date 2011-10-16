@@ -1,44 +1,40 @@
-﻿La génération a démarré 14/10/2011 14:08:21.
-     1>Projet "C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\3D.vcxproj" sur le nœud 2 (build cible(s)).
+﻿La génération a démarré 16/10/2011 15:15:15.
+     1>Projet "E:\GAMAGORA\SI\3D.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\3D.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
-         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\Qt\3.3.2\Include /ID:\Code\Core\Include /Zi /nologo /W3 /WX- /Ox /Oy- /D NO_DEBUG /D WIN32 /D _USRDLL /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt blob.cpp blobblend.cpp blobvertex.cpp opengl.cpp quad.cpp
-         blob.cpp
-     1>c:\documents and settings\icom\mes documents\duff-si\duff-si\BlobNode.h(38): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
-         Génération de code en cours...
-         Compilation en cours...
-         quad.cpp
-     1>c:\documents and settings\icom\mes documents\duff-si\duff-si\BlobNode.h(38): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\Qt\3.3.2\Include /ID:\Code\Core\Include /Zi /nologo /W3 /WX- /Ox /Oy- /D NO_DEBUG /D WIN32 /D _USRDLL /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt blobcylinder.cpp opengl.cpp
          opengl.cpp
-         blobvertex.cpp
-     1>c:\documents and settings\icom\mes documents\duff-si\duff-si\BlobNode.h(38): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
-     1>blobvertex.cpp(51): warning C4101: 'b' : variable locale non référencée
+         blobcylinder.cpp
+     1>e:\gamagora\si\BlobNode.h(42): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
          Génération de code en cours...
-         Ignoré... (aucune modification pertinente détectée)
-         blobblend.cpp
        ManifestResourceCompile:
          Toutes les sorties sont à jour.
        Link:
-         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\Debug\3D.exe" /INCREMENTAL /NOLOGO opengl32.lib glu32.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\3D.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\Debug\3D.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\Debug\3D.lib" /MACHINE:X86 Debug\3D.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GAMAGORA\SI\Debug\3D.exe" /INCREMENTAL /NOLOGO opengl32.lib glu32.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\3D.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\GAMAGORA\SI\Debug\3D.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"E:\GAMAGORA\SI\Debug\3D.lib" /MACHINE:X86 Debug\3D.exe.embed.manifest.res
          Debug\blend.obj
          Debug\blob.obj
          Debug\blobblend.obj
+         Debug\blobcircle.obj
+         Debug\blobcylinder.obj
+         Debug\blobdisk.obj
+         Debug\blobedge.obj
+         Debug\blobsphere.obj
          Debug\blobvertex.obj
          Debug\box.obj
          Debug\opengl.obj
          Debug\quad.obj
        Manifest:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\3D.exe.embed.manifest" /manifest Debug\3D.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\3D.exe.embed.manifest" /manifest Debug\3D.exe.intermediate.manifest
          Toutes les sorties sont à jour.
        LinkEmbedManifest:
          Toutes les sorties sont à jour.
-         3D.vcxproj -> C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\Debug\3D.exe
+         3D.vcxproj -> E:\GAMAGORA\SI\Debug\3D.exe
        FinalizeBuildStatus:
          Suppression du fichier "Debug\3D.unsuccessfulbuild".
          Mise à jour de l'horodatage "Debug\3D.lastbuildstate".
-     1>Génération du projet "C:\Documents and Settings\icom\Mes documents\duff-si\duff-si\3D.vcxproj" terminée (build cible(s)).
+     1>Génération du projet "E:\GAMAGORA\SI\3D.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:04.21
+Temps écoulé 00:00:09.14

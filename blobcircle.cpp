@@ -8,6 +8,9 @@ BlobCircle::BlobCircle(const Vector& center, const Vector& normal, const double&
 	this->radius = radius;
 	this->blend = Blend(r, s);
 	this->box = Box(center, radius + 1);
+	
+	father=NULL;
+	elements[0] = NULL; elements[1] = NULL;
 }
 
 double BlobCircle::Intensity(const Vector& point)
