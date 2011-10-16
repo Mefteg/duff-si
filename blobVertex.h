@@ -35,7 +35,13 @@ public:
 //******************Moving vertex************************************
 class BlobMove:public BlobVertex{
 public:
-	BlobMove(const Vector& v,const double& b,const double&s):BlobVertex(v,b,s){simuPos.push_back(v);iterSimu = simuPos.begin();simuColl.push_back(NULL);iterSimuColl = simuColl.begin();};
+	std::list<Vector>::iterator iterPrevious;
+
+	BlobMove(const Vector& v,const double& b,const double&s):BlobVertex(v,b,s){
+		simuPos.push_back(v);iterSimu = simuPos.begin();
+		simuColl.push_back(NULL);iterSimuColl = simuColl.begin();
+	};
+
 	/*\brief Updates the position of the node*/
 	virtual void Update();
 	/*\brief Simulates the route of the blob node for a given number of frames*/

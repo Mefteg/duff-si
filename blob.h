@@ -16,9 +16,9 @@ class Blob;
 // ///////////////////Blobby shapes\\\\\\\\\\\\\\\\\\\\_____
 class Blob
 { 
+
 public:
-	//nombre de feuilles de l'arbre
-	int nbElements;
+	Vector color;
 
 	double threshold;  //!< Threshold value.
 	BlobNode* element;//!< Root node.
@@ -47,6 +47,8 @@ public:
 
 	 /*\brief Sets the potential colliders of the scene with the  blob. Calls recursively this method on the nodes of the tree. */
 	void SetColliders(std::vector<Blob*> * b);
+
+	void SetColor(const Vector);
 
 	Box GetBox() const { return element->GetBox();}; 
     
