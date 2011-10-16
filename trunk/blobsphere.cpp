@@ -7,6 +7,9 @@ BlobSphere::BlobSphere(const Vector& center, const double& radius, const double&
 	this->radius = radius;
 	this->blend = Blend(r, s);
 	this->box = Box(center, radius + 1);
+	
+	father=NULL;
+	elements[0] = NULL; elements[1] = NULL;
 }
 
 double BlobSphere::Intensity(const Vector& point)

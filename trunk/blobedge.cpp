@@ -9,6 +9,9 @@ BlobEdge::BlobEdge(const Vector& a, const Vector& b, const double& r, const doub
 	this->b = b;
 	this->blend = Blend(r, s);
 	this->box = Box(a + Vector(-r, -r, -r), b + Vector(r, r, r));
+	
+	father=NULL;
+	elements[0] = NULL; elements[1] = NULL;
 }
 
 double BlobEdge::Intensity(const Vector& point)
