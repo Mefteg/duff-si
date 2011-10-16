@@ -97,6 +97,11 @@
     <ClCompile Include="blend.cpp" />
     <ClCompile Include="blob.cpp" />
     <ClCompile Include="blobblend.cpp" />
+    <ClCompile Include="blobcircle.cpp" />
+    <ClCompile Include="blobcylinder.cpp" />
+    <ClCompile Include="blobdisk.cpp" />
+    <ClCompile Include="blobedge.cpp" />
+    <ClCompile Include="blobsphere.cpp" />
     <ClCompile Include="blobvertex.cpp" />
     <ClCompile Include="box.cpp" />
     <ClCompile Include="opengl.cpp" />
@@ -106,7 +111,13 @@
     <ClInclude Include="blend.h" />
     <ClInclude Include="blob.h" />
     <ClInclude Include="blobBlend.h" />
+    <ClInclude Include="blobbox.h" />
+    <ClInclude Include="blobcircle.h" />
+    <ClInclude Include="blobcylinder.h" />
+    <ClInclude Include="blobdisk.h" />
+    <ClInclude Include="blobedge.h" />
     <ClInclude Include="BlobNode.h" />
+    <ClInclude Include="blobsphere.h" />
     <ClInclude Include="blobVertex.h" />
     <ClInclude Include="box.h" />
     <ClInclude Include="clock.h" />

@@ -14,6 +14,9 @@ using namespace std;
 #include "vector.h"
 
 #include "blob.h"
+#include "blobcircle.h"
+#include "blobdisk.h"
+#include "blobcylinder.h"
 #include "opengl.h"
 #include <vector>
 #include <list>
@@ -156,15 +159,15 @@ GLuint GenerateTriangles(){
 void GenerateBlob()
 {
   //Sphere(s)
-  Blob * blob=new Blob( new BlobBlend( 
-						new BlobVertex(Vector(0.0,-10.0,-40.0),10.0,8.0),
-						new BlobVertex(Vector(5.0,-10.0,-35.0),3.0,8.0) )
-    ,
-    param);
+  /*Blob * blob=new Blob( 
+						new BlobDisk(Vector(0.0,-10.0,-37),Vector(0.0,1.0,0.0),5.0,2.0,1.0),
+    
+    param);*/
+
+	 Blob* blob = new Blob( new BlobCylinder(Vector(0,-1,0), Vector(0,1,2), 2,2,2));
   //goutte
   Blob * blob2 = new Blob( 
-									new BlobMove(Vector(-1.0,13.0,-37.5),1.5,1.0)
-									
+							new BlobMove(Vector(-1.0,13.0,-37),1.5,1.0)
 				,param);
 
   blobs.push_back(blob);

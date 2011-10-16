@@ -8,6 +8,9 @@ BlobDisk::BlobDisk(const Vector& center, const Vector& d, const double& radius, 
 	this->radius = radius;
 	this->blend = Blend(r, s);
 	this->box = Box(center, radius + 1);
+
+	elements[0]=NULL;elements[1]=NULL;
+	father=NULL;
 }
 
 double BlobDisk::Intensity(const Vector& point)
