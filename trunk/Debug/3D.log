@@ -1,35 +1,15 @@
-﻿La génération a démarré 16/10/2011 15:15:15.
+﻿La génération a démarré 16/10/2011 20:56:55.
      1>Projet "E:\GAMAGORA\SI\3D.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\3D.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\Qt\3.3.2\Include /ID:\Code\Core\Include /Zi /nologo /W3 /WX- /Ox /Oy- /D NO_DEBUG /D WIN32 /D _USRDLL /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MD /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt blobcylinder.cpp opengl.cpp
-         opengl.cpp
-         blobcylinder.cpp
-     1>e:\gamagora\si\BlobNode.h(42): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
-         Génération de code en cours...
+         Toutes les sorties sont à jour.
        ManifestResourceCompile:
          Toutes les sorties sont à jour.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GAMAGORA\SI\Debug\3D.exe" /INCREMENTAL /NOLOGO opengl32.lib glu32.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\3D.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\GAMAGORA\SI\Debug\3D.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"E:\GAMAGORA\SI\Debug\3D.lib" /MACHINE:X86 Debug\3D.exe.embed.manifest.res
-         Debug\blend.obj
-         Debug\blob.obj
-         Debug\blobblend.obj
-         Debug\blobcircle.obj
-         Debug\blobcylinder.obj
-         Debug\blobdisk.obj
-         Debug\blobedge.obj
-         Debug\blobsphere.obj
-         Debug\blobvertex.obj
-         Debug\box.obj
-         Debug\opengl.obj
-         Debug\quad.obj
+         Toutes les sorties sont à jour.
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\3D.exe.embed.manifest" /manifest Debug\3D.exe.intermediate.manifest
          Toutes les sorties sont à jour.
-       LinkEmbedManifest:
-         Toutes les sorties sont à jour.
-         3D.vcxproj -> E:\GAMAGORA\SI\Debug\3D.exe
        FinalizeBuildStatus:
          Suppression du fichier "Debug\3D.unsuccessfulbuild".
          Mise à jour de l'horodatage "Debug\3D.lastbuildstate".
@@ -37,4 +17,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:09.14
+Temps écoulé 00:00:00.20

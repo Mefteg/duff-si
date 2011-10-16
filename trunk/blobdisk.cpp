@@ -7,7 +7,7 @@ BlobDisk::BlobDisk(const Vector& center, const Vector& d, const double& radius, 
 	this->d = Normalized(d - center);
 	this->radius = radius;
 	this->blend = Blend(r, s);
-	this->box = Box(center, radius + 1);
+	this->box = Box(center, radius + r + 1);
 
 	elements[0]=NULL;elements[1]=NULL;
 	father=NULL;

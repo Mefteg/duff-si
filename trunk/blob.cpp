@@ -35,6 +35,7 @@ Blob::Blob(BlobNode* node,const double& T)
 {
   element=node;
   threshold=T;
+  color = Vector(0.0,0.0,0.0);
 }
 
 /*!
@@ -325,6 +326,10 @@ void Blob::Polygonize(Box box,int n,Vector* vertex,int* triangles,int& nv,int& n
   delete []ez;
 
   nt/=3;
+}
+
+void Blob::SetColor(const Vector v){
+	color = v;
 }
 
 int Blob::triTable[256][16]={

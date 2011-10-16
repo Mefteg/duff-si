@@ -121,11 +121,11 @@ GLuint GenerateTriangles(){
   GLuint list=glGenLists(1);
   // Optimize list
   glNewList(list,GL_COMPILE);
-
-  GlutShade(0.5,0.7,0.6);
   
   std::vector<Blob*>::iterator it = blobs.begin();
   while(it!=blobs.end()){
+	  Vector c = (*it)->color;
+	  GlutShade(c.x,c.y,c.z);
 	  Box box=(*it)->GetBox().Cubic();
 	  (*it)->Polygonize(box,75,av,at,avn,atn,1e-4);
 
@@ -159,23 +159,31 @@ GLuint GenerateTriangles(){
 void GenerateBlob()
 {
   //Sphere(s)
-  /*Blob * blob=new Blob( 
-						new BlobDisk(Vector(0.0,-10.0,-37),Vector(0.0,1.0,0.0),5.0,2.0,1.0),
-    
-    param);*/
-
-	 Blob* blob = new Blob( new BlobCylinder(Vector(0,-1,0), Vector(0,1,2), 2,2,2));
+  Blob* blob = new Blob(
+							 new BlobDisk(Vector(-4,7,-40), Vector(12,23,-30), 7, 1, 2),
+							 
+				param);
   //goutte
-  Blob * blob2 = new Blob( 
-							new BlobMove(Vector(-1.0,13.0,-37),1.5,1.0)
+  Blob * blob2 = new Blob(
+							new BlobMove(Vector(-4.0,24,-40),1.0,1.4)
+							
 				,param);
+  //Sphere en bas
+  Blob * blob3 = new Blob( new BlobVertex(Vector(1,-12,-41),7.5,12), param);
 
   blobs.push_back(blob);
   blobs.push_back(blob2);
+  blobs.push_back(blob3);
 
   //passer la liste des blobs pour les tests de collisions
   blob->SetColliders(&blobs);
   blob2->SetColliders(&blobs);
+  blob3->SetColliders(&blobs);
+
+  //COuleurs
+  blob->SetColor(Vector(0.7,0.02,0.1));
+  blob2->SetColor(Vector(0.0,0.8,0.1));
+  blob3->SetColor(Vector(0.7,0.8,0.8));
 
   //Simuler la scene
   std::vector<Blob*>::iterator it = blobs.begin();
@@ -241,13 +249,13 @@ void Keyboard(unsigned char key, int x, int y)
   if (key=='+')
   {
     cutpos+=Vector(0.0,0.0,0.1);
-    //cut=GenerateCut(blob);
+    cut=GenerateCut(blobs[0]);
 
   }
   if (key=='-')
   {
     cutpos-=Vector(0.0,0.0,0.1);
-    //cut=GenerateCut(blob);
+    cut=GenerateCut(blobs[0]);
 
   }
 
@@ -388,7 +396,7 @@ void GlutIdle(void)
     // récupérer une chaîne de caractères
     std::string result = oss.str();
 	//Enregistrer la scene dans une image (hopefully)
-	//my_grab_ppm("images/image"+result+".ppm");
+	my_grab_ppm("images/image"+result+".ppm");
 
 }
 

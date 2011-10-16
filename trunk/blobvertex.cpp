@@ -50,16 +50,17 @@ void BlobMove::Update(){
 	c= (*iterSimu);
 	Blob * b;
 	if((*iterSimuColl)){
-		(*iterSimuColl)->AddChild(new BlobVertex(c,this->blend.R,-0.04));//ajouter une érosion*/
-		if(blend.R>0.02)
+		(*iterSimuColl)->AddChild(new BlobVertex((*iterPrevious),this->blend.R,-0.4));//ajouter une érosion*/
+		/*if(blend.R>0.02)
 			blend.R -=0.02;
 		else
-			iterSimu = simuPos.end();
+			iterSimu = simuPos.end();*/
 
 	}
 	
 	//mettre a jour la box en conséquence des changements effectués
 	UpdateBox(c,blend.R);
+	iterPrevious = iterSimu;
 	iterSimu++;
 	iterSimuColl++;
 }
@@ -68,7 +69,7 @@ void BlobMove::Simulate(int frames){
 	//calculer et stocker les positions pour chaque frame
 	for(int i=0;i<frames;i++){
 		//q est la prochaine position du blob
-		Vector q = simuPos.back() + Vector(0,-0.5,0);
+		Vector q = simuPos.back() + Vector(0,-0.3,0);
 		//vérifier si il n'est pas dans un autre blob
 		Blob * b = NULL;
 		checkCollisions(q,&b);
@@ -90,7 +91,7 @@ bool BlobMove::checkCollisions(Vector & p, Blob ** b){
 			it++;
 			continue;
 		}
-		//calculer le gradient : vecteur vers la surface
+		//calculer le gradient 
 		Vector g = (*it)->Gradient(p);
 		//point à l'extérieur de la surface
 		Vector o = p - g;

@@ -7,7 +7,7 @@ BlobCircle::BlobCircle(const Vector& center, const Vector& normal, const double&
 	this->normal = Normalized(normal - center);
 	this->radius = radius;
 	this->blend = Blend(r, s);
-	this->box = Box(center, radius + 1);
+	this->box = Box(center, radius + r + 1);
 	
 	father=NULL;
 	elements[0] = NULL; elements[1] = NULL;
