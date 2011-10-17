@@ -1,0 +1,103 @@
+\hypertarget{class_blob_cylinder}{
+\section{BlobCylinder Class Reference}
+\label{class_blob_cylinder}\index{BlobCylinder@{BlobCylinder}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobcylinder.h$>$}
+
+Inheritance diagram for BlobCylinder:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_cylinder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_cylinder_a0a50880e90e3f3120386340d82d0ed90}{
+{\bfseries BlobCylinder} (const \hyperlink{class_vector}{Vector} \&a, const \hyperlink{class_vector}{Vector} \&b, const double \&radius, const double \&r, const double \&s)}
+\label{class_blob_cylinder_a0a50880e90e3f3120386340d82d0ed90}
+
+\item 
+\hypertarget{class_blob_cylinder_a97cb7363b5040a7bb54991ca892aca1c}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_cylinder_a97cb7363b5040a7bb54991ca892aca1c}
+
+\item 
+\hypertarget{class_blob_cylinder_af757858bf76b74151b6a59d624960d3d}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_cylinder_af757858bf76b74151b6a59d624960d3d}
+
+\item 
+double \hyperlink{class_blob_cylinder_aa1f8aad3a097e4562f2545ada6335739}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_cylinder_a8fa31c8102fac1fc21ddd5aac21aa3be}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with cylinder skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_cylinder_a8fa31c8102fac1fc21ddd5aac21aa3be}{
+\index{BlobCylinder@{BlobCylinder}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobCylinder@{BlobCylinder}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobCylinder::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_cylinder_a8fa31c8102fac1fc21ddd5aac21aa3be}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobcylinder
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_cylinder_aa1f8aad3a097e4562f2545ada6335739}{
+\index{BlobCylinder@{BlobCylinder}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobCylinder@{BlobCylinder}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobCylinder::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_cylinder_aa1f8aad3a097e4562f2545ada6335739}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobcylinder_8h}{blobcylinder.h}\item 
+blobcylinder.cpp\end{DoxyCompactItemize}

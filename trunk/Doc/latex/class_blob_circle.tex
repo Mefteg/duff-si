@@ -1,0 +1,103 @@
+\hypertarget{class_blob_circle}{
+\section{BlobCircle Class Reference}
+\label{class_blob_circle}\index{BlobCircle@{BlobCircle}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobcircle.h$>$}
+
+Inheritance diagram for BlobCircle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_circle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_circle_a6c10156952ccc997472433df3dbeecbc}{
+{\bfseries BlobCircle} (const \hyperlink{class_vector}{Vector} \&center, const \hyperlink{class_vector}{Vector} \&normal, const double \&radius, const double \&r, const double \&s)}
+\label{class_blob_circle_a6c10156952ccc997472433df3dbeecbc}
+
+\item 
+\hypertarget{class_blob_circle_a83df1558a4cf1c395cfba3579a851f50}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_circle_a83df1558a4cf1c395cfba3579a851f50}
+
+\item 
+\hypertarget{class_blob_circle_a623206eccf71b62b907a47f27d1947e0}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_circle_a623206eccf71b62b907a47f27d1947e0}
+
+\item 
+double \hyperlink{class_blob_circle_a3ab41ef32643b1e53c09c2a966bebe0d}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_circle_a034e86127a91f23266de09fbd1cff728}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with circle skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_circle_a034e86127a91f23266de09fbd1cff728}{
+\index{BlobCircle@{BlobCircle}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobCircle@{BlobCircle}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobCircle::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_circle_a034e86127a91f23266de09fbd1cff728}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobcircle
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_circle_a3ab41ef32643b1e53c09c2a966bebe0d}{
+\index{BlobCircle@{BlobCircle}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobCircle@{BlobCircle}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobCircle::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_circle_a3ab41ef32643b1e53c09c2a966bebe0d}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobcircle_8h}{blobcircle.h}\item 
+blobcircle.cpp\end{DoxyCompactItemize}

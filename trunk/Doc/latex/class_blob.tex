@@ -1,0 +1,183 @@
+\hypertarget{class_blob}{
+\section{Blob Class Reference}
+\label{class_blob}\index{Blob@{Blob}}
+}
+
+
+Represents a tree of BlobNodes.  
+
+
+
+
+{\ttfamily \#include $<$blob.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_blob_a303a20157a5ed6e219303d0265d78042}{Blob} (\hyperlink{class_blob_node}{BlobNode} $\ast$=NULL, const double \&=0.5)
+\begin{DoxyCompactList}\small\item\em Creates a blob with given root node and threshold. Default threshold is set to 0.5 and the scene graph is set empty. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_a8a8d34c9112cb907fdffcb5dbd2dd244}{
+virtual \hyperlink{class_blob_a8a8d34c9112cb907fdffcb5dbd2dd244}{$\sim$Blob} ()}
+\label{class_blob_a8a8d34c9112cb907fdffcb5dbd2dd244}
+
+\begin{DoxyCompactList}\small\item\em Destroys a blob, recursively destroying the scene graph structure. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_a81e13f50238e9d6d882e4db2c99c112a}{
+double \hyperlink{class_blob_a81e13f50238e9d6d882e4db2c99c112a}{Threshold} ()}
+\label{class_blob_a81e13f50238e9d6d882e4db2c99c112a}
+
+\begin{DoxyCompactList}\small\item\em Returns the threshold value. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_af27b7a8bcfc5aa22fe1d253c0717075f}{
+double \hyperlink{class_blob_af27b7a8bcfc5aa22fe1d253c0717075f}{Intensity} (const \hyperlink{class_vector}{Vector} \&) const }
+\label{class_blob_af27b7a8bcfc5aa22fe1d253c0717075f}
+
+\begin{DoxyCompactList}\small\item\em Compute the field function value at a given point in space. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_a4ca8f2949e4548510f9865b4114d6f09}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_blob_a4ca8f2949e4548510f9865b4114d6f09}{Gradient} (const \hyperlink{class_vector}{Vector} \&) const }
+\label{class_blob_a4ca8f2949e4548510f9865b4114d6f09}
+
+\begin{DoxyCompactList}\small\item\em Compute the gradient of the implicit function using a numerical approximation of the derivatives in each direction. The standard epsilon value used is 10$^{\mbox{-\/6}}$ . \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_ae4e2f414844e733e03f47ceb8aff0d8b}{
+void {\bfseries AddChild} (\hyperlink{class_blob_node}{BlobNode} $\ast$node)}
+\label{class_blob_ae4e2f414844e733e03f47ceb8aff0d8b}
+
+\item 
+\hypertarget{class_blob_ac2097f5c1628ea39d4bd59bf4a0a24e3}{
+int {\bfseries CountElements} ()}
+\label{class_blob_ac2097f5c1628ea39d4bd59bf4a0a24e3}
+
+\item 
+\hypertarget{class_blob_ae92049b436d89c99f3719ddc93060f58}{
+int {\bfseries GetLength} ()}
+\label{class_blob_ae92049b436d89c99f3719ddc93060f58}
+
+\item 
+\hypertarget{class_blob_ae69cdceffb9025d0c496cc1bf81410b3}{
+void {\bfseries Simulate} (int frames)}
+\label{class_blob_ae69cdceffb9025d0c496cc1bf81410b3}
+
+\item 
+\hypertarget{class_blob_ac41016d1f9e3a6661d89880616842c27}{
+\hyperlink{class_vector}{Vector} {\bfseries Dichotomy} (\hyperlink{class_vector}{Vector} a, \hyperlink{class_vector}{Vector} b, double va, double vb, double length, const double \&epsilon) const }
+\label{class_blob_ac41016d1f9e3a6661d89880616842c27}
+
+\item 
+void \hyperlink{class_blob_aa3233eb6028b994f42b41a3d9ccabf1d}{Polygonize} (\hyperlink{class_box}{Box} box, int n, \hyperlink{class_vector}{Vector} $\ast$vertex, int $\ast$triangles, int \&nv, int \&nt, const double \&epsilon)
+\begin{DoxyCompactList}\small\item\em Compute the polygonization of the \hyperlink{class_blob}{Blob}. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_ac91b183c8813c031d3fce0d545e1f163}{
+void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_ac91b183c8813c031d3fce0d545e1f163}
+
+\item 
+\hypertarget{class_blob_ae4aa3fd1e62680b0eab23da468171e3a}{
+void {\bfseries SetColor} (const \hyperlink{class_vector}{Vector})}
+\label{class_blob_ae4aa3fd1e62680b0eab23da468171e3a}
+
+\item 
+\hypertarget{class_blob_a60bc71856d1ecd43812a52f7898e6b5e}{
+\hyperlink{class_box}{Box} {\bfseries GetBox} () const }
+\label{class_blob_a60bc71856d1ecd43812a52f7898e6b5e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_a13c52fdfacc852be7e2a5dd19ddc13c1}{
+\hyperlink{class_vector}{Vector} {\bfseries color}}
+\label{class_blob_a13c52fdfacc852be7e2a5dd19ddc13c1}
+
+\item 
+\hypertarget{class_blob_a663794d2bb5e04a874fdf88812fc3f9c}{
+double \hyperlink{class_blob_a663794d2bb5e04a874fdf88812fc3f9c}{threshold}}
+\label{class_blob_a663794d2bb5e04a874fdf88812fc3f9c}
+
+\begin{DoxyCompactList}\small\item\em Threshold value. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_a032980f6ea07819b42a95d6998f7bf30}{
+\hyperlink{class_blob_node}{BlobNode} $\ast$ \hyperlink{class_blob_a032980f6ea07819b42a95d6998f7bf30}{element}}
+\label{class_blob_a032980f6ea07819b42a95d6998f7bf30}
+
+\begin{DoxyCompactList}\small\item\em Root node. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_ac2f70628bb40012ebc4ac3c7416e9dea}{
+std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$ {\bfseries colliders}}
+\label{class_blob_ac2f70628bb40012ebc4ac3c7416e9dea}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_af12d42c490f868ad34ffb1f8cdd72f9b}{
+static int {\bfseries triTable} \mbox{[}256\mbox{]}\mbox{[}16\mbox{]}}
+\label{class_blob_af12d42c490f868ad34ffb1f8cdd72f9b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a tree of BlobNodes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_blob_a303a20157a5ed6e219303d0265d78042}{
+\index{Blob@{Blob}!Blob@{Blob}}
+\index{Blob@{Blob}!Blob@{Blob}}
+\subsubsection[{Blob}]{\setlength{\rightskip}{0pt plus 5cm}Blob::Blob (
+\begin{DoxyParamCaption}
+\item[{{\bf BlobNode} $\ast$}]{node = {\ttfamily NULL}, }
+\item[{const double \&}]{T = {\ttfamily 0.5}}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_a303a20157a5ed6e219303d0265d78042}
+
+
+Creates a blob with given root node and threshold. Default threshold is set to 0.5 and the scene graph is set empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Root node. \\
+\hline
+{\em T} & Threshold value. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_aa3233eb6028b994f42b41a3d9ccabf1d}{
+\index{Blob@{Blob}!Polygonize@{Polygonize}}
+\index{Polygonize@{Polygonize}!Blob@{Blob}}
+\subsubsection[{Polygonize}]{\setlength{\rightskip}{0pt plus 5cm}void Blob::Polygonize (
+\begin{DoxyParamCaption}
+\item[{{\bf Box}}]{box, }
+\item[{int}]{n, }
+\item[{{\bf Vector} $\ast$}]{vertex, }
+\item[{int $\ast$}]{triangles, }
+\item[{int \&}]{nv, }
+\item[{int \&}]{nt, }
+\item[{const double \&}]{epsilon}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_aa3233eb6028b994f42b41a3d9ccabf1d}
+
+
+Compute the polygonization of the \hyperlink{class_blob}{Blob}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box} & \hyperlink{class_box}{Box} defining the domain. \\
+\hline
+{\em n} & Grid subdivision parameter. \\
+\hline
+{\em vertex} & Array of vertices \\
+\hline
+{\em triangles} & Array of integers defining the triangles. \\
+\hline
+{\em nv} & Number of vertices \\
+\hline
+{\em nt} & Number of triangles. \\
+\hline
+{\em epsilon} & Precision. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+blob.h\item 
+blob.cpp\end{DoxyCompactItemize}

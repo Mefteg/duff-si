@@ -1,0 +1,103 @@
+\hypertarget{class_blob_edge}{
+\section{BlobEdge Class Reference}
+\label{class_blob_edge}\index{BlobEdge@{BlobEdge}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobedge.h$>$}
+
+Inheritance diagram for BlobEdge:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_edge_af74f4188c371a488f7650f8b1b011209}{
+{\bfseries BlobEdge} (const \hyperlink{class_vector}{Vector} \&a, const \hyperlink{class_vector}{Vector} \&b, const double \&r, const double \&s)}
+\label{class_blob_edge_af74f4188c371a488f7650f8b1b011209}
+
+\item 
+\hypertarget{class_blob_edge_aa13b95bf61f264904b1aed5d8ee75715}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_edge_aa13b95bf61f264904b1aed5d8ee75715}
+
+\item 
+\hypertarget{class_blob_edge_a0708905d9f6b4b4697ddc21da99b4961}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_edge_a0708905d9f6b4b4697ddc21da99b4961}
+
+\item 
+double \hyperlink{class_blob_edge_ae22e73d24227a2daec56d79ccd373c8f}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_edge_a4b0a4785087b2eccd7cab4c57033376e}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with edge skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_edge_a4b0a4785087b2eccd7cab4c57033376e}{
+\index{BlobEdge@{BlobEdge}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobEdge@{BlobEdge}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobEdge::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_edge_a4b0a4785087b2eccd7cab4c57033376e}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobedge
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_edge_ae22e73d24227a2daec56d79ccd373c8f}{
+\index{BlobEdge@{BlobEdge}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobEdge@{BlobEdge}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobEdge::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_edge_ae22e73d24227a2daec56d79ccd373c8f}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobedge_8h}{blobedge.h}\item 
+blobedge.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{class_blob_blend}{
+\section{BlobBlend Class Reference}
+\label{class_blob_blend}\index{BlobBlend@{BlobBlend}}
+}
+
+
+This class implements a blending node in the blobby scene graph.  
+
+
+
+
+{\ttfamily \#include $<$blob.h$>$}
+
+Inheritance diagram for BlobBlend:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_blob_blend}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_blend_a134f44336ec248ba777cfdfd1f432eaa}{
+\hyperlink{class_blob_blend_a134f44336ec248ba777cfdfd1f432eaa}{BlobBlend} (\hyperlink{class_blob_node}{BlobNode} $\ast$, \hyperlink{class_blob_node}{BlobNode} $\ast$)}
+\label{class_blob_blend_a134f44336ec248ba777cfdfd1f432eaa}
+
+\begin{DoxyCompactList}\small\item\em Create a blending node given a set of children nodes. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_blend_aced26c958ced9a52cd8bcefeedfcf8b4}{
+virtual \hyperlink{class_blob_blend_aced26c958ced9a52cd8bcefeedfcf8b4}{$\sim$BlobBlend} ()}
+\label{class_blob_blend_aced26c958ced9a52cd8bcefeedfcf8b4}
+
+\begin{DoxyCompactList}\small\item\em Destroys a blending node. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_blend_af6ce836e9bfceb50edae2c13369a87be}{
+double \hyperlink{class_blob_blend_af6ce836e9bfceb50edae2c13369a87be}{Intensity} (const \hyperlink{class_vector}{Vector} \&)}
+\label{class_blob_blend_af6ce836e9bfceb50edae2c13369a87be}
+
+\begin{DoxyCompactList}\small\item\em Computes the field value at a given point in space. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_blend_a3502578a89ad71f062a021279654f1a0}{
+virtual void {\bfseries Update} ()}
+\label{class_blob_blend_a3502578a89ad71f062a021279654f1a0}
+
+\item 
+\hypertarget{class_blob_blend_a9aaf51c4f1b79010a75a0fefe0287a59}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_blend_a9aaf51c4f1b79010a75a0fefe0287a59}
+
+\item 
+\hypertarget{class_blob_blend_a22c7508782c51a2b9279d7333a8566bc}{
+virtual void {\bfseries Simulate} (int)}
+\label{class_blob_blend_a22c7508782c51a2b9279d7333a8566bc}
+
+\item 
+\hypertarget{class_blob_blend_a971fb2752086abcf7b598e8369c615bf}{
+void {\bfseries UpdateBox} ()}
+\label{class_blob_blend_a971fb2752086abcf7b598e8369c615bf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a blending node in the blobby scene graph. Node that computes a blending between its two children. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+blobBlend.h\item 
+blobblend.cpp\end{DoxyCompactItemize}

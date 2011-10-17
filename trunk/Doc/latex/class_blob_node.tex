@@ -1,0 +1,123 @@
+\hypertarget{class_blob_node}{
+\section{BlobNode Class Reference}
+\label{class_blob_node}\index{BlobNode@{BlobNode}}
+}
+
+
+Generic \hyperlink{class_blob}{Blob} Node, Abstract Class.  
+
+
+
+
+{\ttfamily \#include $<$BlobNode.h$>$}
+
+Inheritance diagram for BlobNode:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_blob_node}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{
+virtual double \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{Intensity} (const \hyperlink{class_vector}{Vector} \&)=0}
+\label{class_blob_node_a4987f9060e9141647c514efd9859d0ba}
+
+\begin{DoxyCompactList}\small\item\em Computes the intensity of the field function at a given point in space. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_node_a542d05d0c6348b26c78ebc193f066506}{
+bool {\bfseries isLeaf} ()}
+\label{class_blob_node_a542d05d0c6348b26c78ebc193f066506}
+
+\item 
+\hypertarget{class_blob_node_a413bd0ae9b5d29525e5144f07416d3b2}{
+int {\bfseries CountElements} ()}
+\label{class_blob_node_a413bd0ae9b5d29525e5144f07416d3b2}
+
+\item 
+\hypertarget{class_blob_node_a555ec4a4a6a7e3d1ce0d43b652277891}{
+int {\bfseries GetLength} ()}
+\label{class_blob_node_a555ec4a4a6a7e3d1ce0d43b652277891}
+
+\item 
+\hypertarget{class_blob_node_a927217bae2ccf26593e8a49b06e3a6c9}{
+void {\bfseries SetBox} (const \hyperlink{class_vector}{Vector} \&c, const double \&r)}
+\label{class_blob_node_a927217bae2ccf26593e8a49b06e3a6c9}
+
+\item 
+\hypertarget{class_blob_node_a3d683f1393164d06e83131226d55d69c}{
+\hyperlink{class_box}{Box} {\bfseries GetBox} () const }
+\label{class_blob_node_a3d683f1393164d06e83131226d55d69c}
+
+\item 
+\hypertarget{class_blob_node_a59a4a94b42af71a0a3d118115405b338}{
+virtual void {\bfseries Update} ()}
+\label{class_blob_node_a59a4a94b42af71a0a3d118115405b338}
+
+\item 
+\hypertarget{class_blob_node_a78e42272e883c751bf544d8a7f56a996}{
+virtual void {\bfseries Simulate} (int)}
+\label{class_blob_node_a78e42272e883c751bf544d8a7f56a996}
+
+\item 
+\hypertarget{class_blob_node_a31c79809f50a2e1dae8da6387e45d7e1}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)=0}
+\label{class_blob_node_a31c79809f50a2e1dae8da6387e45d7e1}
+
+\item 
+\hypertarget{class_blob_node_a7dfe920da7568ba478cae187f43eed7b}{
+virtual void {\bfseries UpdateBox} ()=0}
+\label{class_blob_node_a7dfe920da7568ba478cae187f43eed7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_node_acbd69dfaa0254d52401d3ea0dd2dd8d2}{
+\hyperlink{class_box}{Box} \hyperlink{class_blob_node_acbd69dfaa0254d52401d3ea0dd2dd8d2}{box}}
+\label{class_blob_node_acbd69dfaa0254d52401d3ea0dd2dd8d2}
+
+\begin{DoxyCompactList}\small\item\em Bounding box of the node. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_node_a2649ffcd4f77895252968e9babe7a635}{
+\hyperlink{class_blob_node}{BlobNode} $\ast$ {\bfseries father}}
+\label{class_blob_node_a2649ffcd4f77895252968e9babe7a635}
+
+\item 
+\hypertarget{class_blob_node_a38cbfac33ffc463459bad114bd7464fd}{
+\hyperlink{class_blob_node}{BlobNode} $\ast$ \hyperlink{class_blob_node_a38cbfac33ffc463459bad114bd7464fd}{elements} \mbox{[}2\mbox{]}}
+\label{class_blob_node_a38cbfac33ffc463459bad114bd7464fd}
+
+\begin{DoxyCompactList}\small\item\em Set of blending elements. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_node_a126c34f1189c5e50413eb59e550e90f4}{
+std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$ {\bfseries colliders}}
+\label{class_blob_node_a126c34f1189c5e50413eb59e550e90f4}
+
+\item 
+\hypertarget{class_blob_node_a94d44b9f5031082be810cbdae4429f6e}{
+std::list$<$ \hyperlink{class_vector}{Vector} $>$ {\bfseries simuPos}}
+\label{class_blob_node_a94d44b9f5031082be810cbdae4429f6e}
+
+\item 
+\hypertarget{class_blob_node_ac35248fa9bc1df6fbc0939a37cb878da}{
+std::list$<$ \hyperlink{class_vector}{Vector} $>$::iterator {\bfseries iterSimu}}
+\label{class_blob_node_ac35248fa9bc1df6fbc0939a37cb878da}
+
+\item 
+\hypertarget{class_blob_node_aad3ad6d76175c1fb9543dcb4cae6acac}{
+std::list$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ {\bfseries simuColl}}
+\label{class_blob_node_aad3ad6d76175c1fb9543dcb4cae6acac}
+
+\item 
+\hypertarget{class_blob_node_a9c4171c767323f4148d61e6445728d2f}{
+std::list$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$::iterator {\bfseries iterSimuColl}}
+\label{class_blob_node_a9c4171c767323f4148d61e6445728d2f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic \hyperlink{class_blob}{Blob} Node, Abstract Class. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+BlobNode.h\end{DoxyCompactItemize}
