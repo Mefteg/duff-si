@@ -1,0 +1,96 @@
+\hypertarget{class_blob_vertex}{
+\section{BlobVertex Class Reference}
+\label{class_blob_vertex}\index{BlobVertex@{BlobVertex}}
+}
+
+
+Node whose intensity is computed around a vertex.  
+
+
+
+
+{\ttfamily \#include $<$blobVertex.h$>$}
+
+Inheritance diagram for BlobVertex:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_blob_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_blob_vertex_a25002920035388fcf4b484bcea120662}{BlobVertex} (const \hyperlink{class_vector}{Vector} \&, const double \&, const double \&)
+\begin{DoxyCompactList}\small\item\em Create a point skeletal element. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_vertex_a9bcd5a3956c45ce08586735204148044}{
+double \hyperlink{class_blob_vertex_a9bcd5a3956c45ce08586735204148044}{Intensity} (const \hyperlink{class_vector}{Vector} \&)}
+\label{class_blob_vertex_a9bcd5a3956c45ce08586735204148044}
+
+\begin{DoxyCompactList}\small\item\em Overloaded to minimize function calls. \item\end{DoxyCompactList}\item 
+\hypertarget{class_blob_vertex_a59e20ffd92bd5d3f57911d365e98208b}{
+virtual void {\bfseries Update} ()}
+\label{class_blob_vertex_a59e20ffd92bd5d3f57911d365e98208b}
+
+\item 
+\hypertarget{class_blob_vertex_a2a3f078529cf304286d4c5c71c8ec455}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_vertex_a2a3f078529cf304286d4c5c71c8ec455}
+
+\item 
+\hypertarget{class_blob_vertex_a538e272f30184e0c6d5a4cad397cd2fd}{
+void {\bfseries Simulate} (int)}
+\label{class_blob_vertex_a538e272f30184e0c6d5a4cad397cd2fd}
+
+\item 
+\hypertarget{class_blob_vertex_a5a76b45262f2ee0556875e20f29724da}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_vertex_a5a76b45262f2ee0556875e20f29724da}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_vertex_a104c4fabe9b59a195277622b75e0357e}{
+\hyperlink{class_blend}{Blend} {\bfseries blend}}
+\label{class_blob_vertex_a104c4fabe9b59a195277622b75e0357e}
+
+\item 
+\hypertarget{class_blob_vertex_ab14551703c3eda8a5702dd0529ba741e}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_blob_vertex_ab14551703c3eda8a5702dd0529ba741e}{c}}
+\label{class_blob_vertex_ab14551703c3eda8a5702dd0529ba741e}
+
+\begin{DoxyCompactList}\small\item\em Center. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Node whose intensity is computed around a vertex. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_blob_vertex_a25002920035388fcf4b484bcea120662}{
+\index{BlobVertex@{BlobVertex}!BlobVertex@{BlobVertex}}
+\index{BlobVertex@{BlobVertex}!BlobVertex@{BlobVertex}}
+\subsubsection[{BlobVertex}]{\setlength{\rightskip}{0pt plus 5cm}BlobVertex::BlobVertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{c, }
+\item[{const double \&}]{r, }
+\item[{const double \&}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_vertex_a25002920035388fcf4b484bcea120662}
+
+
+Create a point skeletal element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Center. \\
+\hline
+{\em blend} & Blending function. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+blobVertex.h\item 
+blobvertex.cpp\end{DoxyCompactItemize}

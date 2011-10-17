@@ -1,0 +1,252 @@
+\hypertarget{class_box}{
+\section{Box Class Reference}
+\label{class_box}\index{Box@{Box}}
+}
+
+
+This class implements an axis aligned box.  
+
+
+
+
+{\ttfamily \#include $<$box.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_box_aca78d7db44972bfa78d46b7bbc8796f6}{
+\hyperlink{class_box_aca78d7db44972bfa78d46b7bbc8796f6}{Box} ()}
+\label{class_box_aca78d7db44972bfa78d46b7bbc8796f6}
+
+\begin{DoxyCompactList}\small\item\em Creates a generic box (empty). \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_ab4a2a18916c428de651b22cdf280bf3e}{
+\hyperlink{class_box_ab4a2a18916c428de651b22cdf280bf3e}{Box} (const \hyperlink{class_vector}{Vector} \&)}
+\label{class_box_ab4a2a18916c428de651b22cdf280bf3e}
+
+\begin{DoxyCompactList}\small\item\em Create an empty box given one vertex. \item\end{DoxyCompactList}\item 
+\hyperlink{class_box_a3b265aca59fbaf89be6f7a254088698a}{Box} (const \hyperlink{class_vector}{Vector} \&, const \hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em Create a box given two opposite corners. Note that this constructor does not check the coordinates of the two vectors. \item\end{DoxyCompactList}\item 
+\hyperlink{class_box_aa151dd75dfbe1632979853fe157322ea}{Box} (const \hyperlink{class_vector}{Vector} \&, const double \&)
+\begin{DoxyCompactList}\small\item\em Create a box given a center point and the half side length. \item\end{DoxyCompactList}\item 
+\hyperlink{class_box_a85ed08338073ace8d12833af0c861efb}{Box} (\hyperlink{class_vector}{Vector} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Creates the bounding box of a set of points. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a0a7c6f0b0405db01518bb3201b00c9a2}{
+\hyperlink{class_box_a0a7c6f0b0405db01518bb3201b00c9a2}{Box} (const \hyperlink{class_box}{Box} \&, const \hyperlink{class_box}{Box} \&)}
+\label{class_box_a0a7c6f0b0405db01518bb3201b00c9a2}
+
+\begin{DoxyCompactList}\small\item\em Create a box embedding two boxes. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a6a5e09398e85d602a046b429062fb9c2}{
+\hyperlink{class_box_a6a5e09398e85d602a046b429062fb9c2}{$\sim$Box} ()}
+\label{class_box_a6a5e09398e85d602a046b429062fb9c2}
+
+\begin{DoxyCompactList}\small\item\em Destroy a box, empty. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_ad41f9a6efac5787613914b12e4c3d11d}{
+\hyperlink{class_vector}{Vector} \& \hyperlink{class_box_ad41f9a6efac5787613914b12e4c3d11d}{operator\mbox{[}$\,$\mbox{]}} (int)}
+\label{class_box_ad41f9a6efac5787613914b12e4c3d11d}
+
+\begin{DoxyCompactList}\small\item\em Returns either end vertex of the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_ae638073ba0eb5b6cb7a1f9de3b9a7bd8}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_box_ae638073ba0eb5b6cb7a1f9de3b9a7bd8}{operator\mbox{[}$\,$\mbox{]}} (int) const }
+\label{class_box_ae638073ba0eb5b6cb7a1f9de3b9a7bd8}
+
+\begin{DoxyCompactList}\small\item\em Overloaded. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a44e2805cb2a7acaaa3937522fae56d23}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_box_a44e2805cb2a7acaaa3937522fae56d23}{Center} () const }
+\label{class_box_a44e2805cb2a7acaaa3937522fae56d23}
+
+\begin{DoxyCompactList}\small\item\em Returns the center of the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a3e077400dd38d177c39bcc711788eed9}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_box_a3e077400dd38d177c39bcc711788eed9}{Diagonal} () const }
+\label{class_box_a3e077400dd38d177c39bcc711788eed9}
+
+\begin{DoxyCompactList}\small\item\em Returns the half diagonal of the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a44dd9300bf9713c9190c3a1e69ef5728}{
+double \hyperlink{class_box_a44dd9300bf9713c9190c3a1e69ef5728}{Radius} () const }
+\label{class_box_a44dd9300bf9713c9190c3a1e69ef5728}
+
+\begin{DoxyCompactList}\small\item\em Returns the radius of the box, i.e. the length of the half diagonal of the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a35f5775304c754981b8a38d141737880}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_box_a35f5775304c754981b8a38d141737880}{Vertex} (int) const }
+\label{class_box_a35f5775304c754981b8a38d141737880}
+
+\begin{DoxyCompactList}\small\item\em Returns the k$^{\mbox{th}}$  vertex of the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a913a6b1487999917a85d87b49b3c1c52}{
+double \hyperlink{class_box_a913a6b1487999917a85d87b49b3c1c52}{R} (const \hyperlink{class_vector}{Vector} \&) const }
+\label{class_box_a913a6b1487999917a85d87b49b3c1c52}
+
+\begin{DoxyCompactList}\small\item\em Computes the minimum distance between the box and a point in space. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a80db61cd35cae3122fe658ac079495ee}{
+\hyperlink{class_vector}{Vector} {\bfseries Normal} (const \hyperlink{class_vector}{Vector} \&) const }
+\label{class_box_a80db61cd35cae3122fe658ac079495ee}
+
+\item 
+\hypertarget{class_box_abc15073158a80e02f4b1fb32b50e1eb6}{
+int \hyperlink{class_box_abc15073158a80e02f4b1fb32b50e1eb6}{Inside} (const \hyperlink{class_box}{Box} \&) const }
+\label{class_box_abc15073158a80e02f4b1fb32b50e1eb6}
+
+\begin{DoxyCompactList}\small\item\em Checks if a box is inside the instance. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_aa3a80d26840216d02e1096e28333d65b}{
+int \hyperlink{class_box_aa3a80d26840216d02e1096e28333d65b}{Inside} (const \hyperlink{class_vector}{Vector} \&) const }
+\label{class_box_aa3a80d26840216d02e1096e28333d65b}
+
+\begin{DoxyCompactList}\small\item\em Checks if a point is inside the box. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a830204e3b9e91fbcbe79ba0d6e9ff075}{
+\hyperlink{class_box}{Box} \hyperlink{class_box_a830204e3b9e91fbcbe79ba0d6e9ff075}{Sub} (int) const }
+\label{class_box_a830204e3b9e91fbcbe79ba0d6e9ff075}
+
+\begin{DoxyCompactList}\small\item\em Computes the sub-\/box in the n$^{\mbox{th}}$  octant. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a1b95e5c08d3ef360904854beea1ae757}{
+\hyperlink{class_box}{Box} {\bfseries Cubic} () const }
+\label{class_box_a1b95e5c08d3ef360904854beea1ae757}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_box_af9c25486a750badb5e746ba616e44bce}{
+\hyperlink{class_vector}{Vector} {\bfseries a}}
+\label{class_box_af9c25486a750badb5e746ba616e44bce}
+
+\item 
+\hypertarget{class_box_a9ba6812e3bc99ab5faf29f44550b57f5}{
+\hyperlink{class_vector}{Vector} \hyperlink{class_box_a9ba6812e3bc99ab5faf29f44550b57f5}{b}}
+\label{class_box_a9ba6812e3bc99ab5faf29f44550b57f5}
+
+\begin{DoxyCompactList}\small\item\em End vertices of the box. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_box_ab038c94f04821a9ab0e0313819e5187c}{
+static const double {\bfseries epsilon} = 1.0e-\/5}
+\label{class_box_ab038c94f04821a9ab0e0313819e5187c}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_box_a000f946af88eafb9880242a0aa8afbd4}{
+\hyperlink{class_box}{Box} \hyperlink{class_box_a000f946af88eafb9880242a0aa8afbd4}{operator+} (const \hyperlink{class_box}{Box} \&, const \hyperlink{class_box}{Box} \&)}
+\label{class_box_a000f946af88eafb9880242a0aa8afbd4}
+
+\begin{DoxyCompactList}\small\item\em Computes the Minkowski sum of two boxes. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_a63c726eee68a94c84db3e257a9010275}{
+\hyperlink{class_box}{Box} \hyperlink{class_box_a63c726eee68a94c84db3e257a9010275}{operator$\ast$} (const double \&, const \hyperlink{class_box}{Box} \&)}
+\label{class_box_a63c726eee68a94c84db3e257a9010275}
+
+\begin{DoxyCompactList}\small\item\em Scales a box by a scalar factor. \item\end{DoxyCompactList}\item 
+\hypertarget{class_box_ab4993d84958c941ab10bacb6014003ca}{
+\hyperlink{class_box}{Box} \hyperlink{class_box_ab4993d84958c941ab10bacb6014003ca}{operator$\ast$} (const \hyperlink{class_box}{Box} \&, const double \&)}
+\label{class_box_ab4993d84958c941ab10bacb6014003ca}
+
+\begin{DoxyCompactList}\small\item\em Overloaded. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_box_af5dd03ec48233c58649fd2227f3c2d1d}{R} (const \hyperlink{class_box}{Box} \&, const \hyperlink{class_box}{Box} \&)
+\begin{DoxyCompactList}\small\item\em Compute the squared Euclidean distance between two boxes. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements an axis aligned box. The data structure stores the opposite two corners as vectors. The center and the radius (diagonal vector) are computed on the fly by inline functions.
+
+The vertices of a box can be obtained by using the Box::Vertex(int) member function which returns one of the eight vertices of the box. The two opposite corners can be obtained faster as follows: 
+\begin{DoxyCode}
+Box box(Vector(0.0,0.0,0.0),Vector(1.0,1.0,1.0)); // Unit box
+Vector a=box[0]; // Lower vertex
+Vector b=box[1]; // Opposite vertex
+\end{DoxyCode}
+
+
+This class provides a set of useful functions, such as the intersection between a box and a ray. This class also implements the Minkowski sum of boxes by overloading some operators. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_box_a3b265aca59fbaf89be6f7a254088698a}{
+\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box::Box (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{a, }
+\item[{const {\bf Vector} \&}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{class_box_a3b265aca59fbaf89be6f7a254088698a}
+
+
+Create a box given two opposite corners. Note that this constructor does not check the coordinates of the two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & End vertices. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_aa151dd75dfbe1632979853fe157322ea}{
+\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box::Box (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{c, }
+\item[{const double \&}]{r}
+\end{DoxyParamCaption}
+)}}
+\label{class_box_aa151dd75dfbe1632979853fe157322ea}
+
+
+Create a box given a center point and the half side length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Center. \\
+\hline
+{\em r} & Half side length. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_box_a85ed08338073ace8d12833af0c861efb}{
+\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\subsubsection[{Box}]{\setlength{\rightskip}{0pt plus 5cm}Box::Box (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector} $\ast$}]{v, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{class_box_a85ed08338073ace8d12833af0c861efb}
+
+
+Creates the bounding box of a set of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Array of vertices. \\
+\hline
+{\em n} & Number of vertices. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_box_af5dd03ec48233c58649fd2227f3c2d1d}{
+\index{Box@{Box}!R@{R}}
+\index{R@{R}!Box@{Box}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}double R (
+\begin{DoxyParamCaption}
+\item[{const {\bf Box} \&}]{x, }
+\item[{const {\bf Box} \&}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{class_box_af5dd03ec48233c58649fd2227f3c2d1d}
+
+
+Compute the squared Euclidean distance between two boxes. 
+
+This function computes the squared distance to avoid the computation of a square root out of efficiency.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & The two boxes. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]TODO Check if this function is ok : test it. \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+box.h\item 
+box.cpp\end{DoxyCompactItemize}

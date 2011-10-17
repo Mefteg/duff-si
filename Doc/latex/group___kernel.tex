@@ -1,0 +1,20 @@
+\hypertarget{group___kernel}{
+\section{Core geometric classes}
+\label{group___kernel}\index{Core geometric classes@{Core geometric classes}}
+}
+
+
+Core geometric classes include several core classes such as \hyperlink{class_box}{Box}, Axis, Cylinder, Cone, Plane and many others that are usefull in many graphic applications.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_box}{Box}
+\begin{DoxyCompactList}\small\item\em This class implements an axis aligned box. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Core geometric classes include several core classes such as \hyperlink{class_box}{Box}, Axis, Cylinder, Cone, Plane and many others that are usefull in many graphic applications. Most of the time, those classes have been implemented so as to save memory. For example, the Sphere class only stores the center and the radius, but does not store the squared radius altough this value is often needed in many algorithms such as intersection with a ray, or point membership classification. The very reason for this is that in that case only one multiply is needed to compute the squared radius, which is not very computationally demanding.
+
+One notable exception to this rule is the implementation of the class Axis, which is used for implementing many other classes such as the Cone or the Cylinder. This class not only stores the end points of the axis, but also the normalized axis vector and the length of the axis. See the details of the Axis class for further details. 

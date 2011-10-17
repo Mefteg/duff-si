@@ -1,0 +1,103 @@
+\hypertarget{class_blob_sphere}{
+\section{BlobSphere Class Reference}
+\label{class_blob_sphere}\index{BlobSphere@{BlobSphere}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobsphere.h$>$}
+
+Inheritance diagram for BlobSphere:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_sphere}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_sphere_a5181c17fc3b1460d9bf46852763c8050}{
+{\bfseries BlobSphere} (const \hyperlink{class_vector}{Vector} \&center, const double \&radius, const double \&r, const double \&s)}
+\label{class_blob_sphere_a5181c17fc3b1460d9bf46852763c8050}
+
+\item 
+\hypertarget{class_blob_sphere_a4e1a10b6e809645700d3217e529d3f4c}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_sphere_a4e1a10b6e809645700d3217e529d3f4c}
+
+\item 
+\hypertarget{class_blob_sphere_af439d6400685ae17f2c3acb2f2f2f632}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_sphere_af439d6400685ae17f2c3acb2f2f2f632}
+
+\item 
+double \hyperlink{class_blob_sphere_a5bcf3148ee40b0475bcafbfc12d0afb2}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_sphere_a8cb2d5945ea7f852fd6f307bc39038da}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with sphere skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_sphere_a8cb2d5945ea7f852fd6f307bc39038da}{
+\index{BlobSphere@{BlobSphere}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobSphere@{BlobSphere}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobSphere::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_sphere_a8cb2d5945ea7f852fd6f307bc39038da}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobsphere
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_sphere_a5bcf3148ee40b0475bcafbfc12d0afb2}{
+\index{BlobSphere@{BlobSphere}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobSphere@{BlobSphere}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobSphere::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_sphere_a5bcf3148ee40b0475bcafbfc12d0afb2}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobsphere_8h}{blobsphere.h}\item 
+blobsphere.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{class_blob_move}{
+\section{BlobMove Class Reference}
+\label{class_blob_move}\index{BlobMove@{BlobMove}}
+}
+
+
+Node whose intensity is computed around a vertex. Its movement is led by gravity. It erodes the surfaces it collide with.  
+
+
+
+
+{\ttfamily \#include $<$blobVertex.h$>$}
+
+Inheritance diagram for BlobMove:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_blob_move}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_move_ae3fc4eeb3ac01dd2ebec600103b673f1}{
+{\bfseries BlobMove} (const \hyperlink{class_vector}{Vector} \&v, const double \&b, const double \&s)}
+\label{class_blob_move_ae3fc4eeb3ac01dd2ebec600103b673f1}
+
+\item 
+\hypertarget{class_blob_move_a5b3085683b93c8358e018a26adfac241}{
+virtual void {\bfseries Update} ()}
+\label{class_blob_move_a5b3085683b93c8358e018a26adfac241}
+
+\item 
+\hypertarget{class_blob_move_ad91c34abe256a759e6cb25b96ac4178c}{
+void {\bfseries Simulate} (int)}
+\label{class_blob_move_ad91c34abe256a759e6cb25b96ac4178c}
+
+\item 
+\hypertarget{class_blob_move_adb9858f39d6079522863f166f1a4bfb0}{
+virtual void {\bfseries UpdateBox} (const \hyperlink{class_vector}{Vector} \&\hyperlink{class_blob_vertex_ab14551703c3eda8a5702dd0529ba741e}{c}, const double \&r)}
+\label{class_blob_move_adb9858f39d6079522863f166f1a4bfb0}
+
+\item 
+\hypertarget{class_blob_move_a4f7121956cd4b46cdddc8448481179da}{
+bool {\bfseries checkCollisions} (\hyperlink{class_vector}{Vector} \&p, \hyperlink{class_blob}{Blob} $\ast$$\ast$b)}
+\label{class_blob_move_a4f7121956cd4b46cdddc8448481179da}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_move_aecf8ca0a32595f9d0619e89aef16d42d}{
+std::list$<$ \hyperlink{class_vector}{Vector} $>$::iterator {\bfseries iterPrevious}}
+\label{class_blob_move_aecf8ca0a32595f9d0619e89aef16d42d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Node whose intensity is computed around a vertex. Its movement is led by gravity. It erodes the surfaces it collide with. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+blobVertex.h\item 
+blobvertex.cpp\end{DoxyCompactItemize}

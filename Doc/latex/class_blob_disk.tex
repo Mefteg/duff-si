@@ -1,0 +1,103 @@
+\hypertarget{class_blob_disk}{
+\section{BlobDisk Class Reference}
+\label{class_blob_disk}\index{BlobDisk@{BlobDisk}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobdisk.h$>$}
+
+Inheritance diagram for BlobDisk:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_disk}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_disk_a6ada5d4eaf83133770093b79cf236fae}{
+{\bfseries BlobDisk} (const \hyperlink{class_vector}{Vector} \&center, const \hyperlink{class_vector}{Vector} \&d, const double \&radius, const double \&r, const double \&s)}
+\label{class_blob_disk_a6ada5d4eaf83133770093b79cf236fae}
+
+\item 
+\hypertarget{class_blob_disk_a3c5e4ebf872ec9260234672540cfca21}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_disk_a3c5e4ebf872ec9260234672540cfca21}
+
+\item 
+\hypertarget{class_blob_disk_ac43415b67a5672b9ecf556613158c07c}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_disk_ac43415b67a5672b9ecf556613158c07c}
+
+\item 
+double \hyperlink{class_blob_disk_ae057c9ec438f187c98355f7898458cea}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_disk_aa999caad1dd27366971214f2b2d0e9aa}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with disk skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_disk_aa999caad1dd27366971214f2b2d0e9aa}{
+\index{BlobDisk@{BlobDisk}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobDisk@{BlobDisk}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobDisk::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_disk_aa999caad1dd27366971214f2b2d0e9aa}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobdisk
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_disk_ae057c9ec438f187c98355f7898458cea}{
+\index{BlobDisk@{BlobDisk}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobDisk@{BlobDisk}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobDisk::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_disk_ae057c9ec438f187c98355f7898458cea}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobdisk_8h}{blobdisk.h}\item 
+blobdisk.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{class_blob_box}{
+\section{BlobBox Class Reference}
+\label{class_blob_box}\index{BlobBox@{BlobBox}}
+}
+
+
+Primitive implicit surface class.  
+
+
+
+
+{\ttfamily \#include $<$blobbox.h$>$}
+
+Inheritance diagram for BlobBox:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blob_box}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blob_box_a083206a74f50bd6c4f25a9f3642c7233}{
+{\bfseries BlobBox} (const \hyperlink{class_vector}{Vector} \&a, const \hyperlink{class_vector}{Vector} \&b, const double \&r, const double \&s)}
+\label{class_blob_box_a083206a74f50bd6c4f25a9f3642c7233}
+
+\item 
+\hypertarget{class_blob_box_a0ea94bf8692110f8a4ed3f9c4fe4fd86}{
+virtual void {\bfseries UpdateBox} ()}
+\label{class_blob_box_a0ea94bf8692110f8a4ed3f9c4fe4fd86}
+
+\item 
+\hypertarget{class_blob_box_a8db2b9645f8a7d795e1ef4a1502f99a9}{
+virtual void {\bfseries SetColliders} (std::vector$<$ \hyperlink{class_blob}{Blob} $\ast$ $>$ $\ast$b)}
+\label{class_blob_box_a8db2b9645f8a7d795e1ef4a1502f99a9}
+
+\item 
+double \hyperlink{class_blob_box_a77db706ca8bf91da6875b92db33bbcc5}{Intensity} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Intensity computing. \item\end{DoxyCompactList}\item 
+double \hyperlink{class_blob_box_a13828cb1f1211b3f3a075cd113564615}{Distance} (const \hyperlink{class_vector}{Vector} \&point)
+\begin{DoxyCompactList}\small\item\em Distance computing. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive implicit surface class. primitive with box skeleton 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_blob_box_a13828cb1f1211b3f3a075cd113564615}{
+\index{BlobBox@{BlobBox}!Distance@{Distance}}
+\index{Distance@{Distance}!BlobBox@{BlobBox}}
+\subsubsection[{Distance}]{\setlength{\rightskip}{0pt plus 5cm}double BlobBox::Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)}}
+\label{class_blob_box_a13828cb1f1211b3f3a075cd113564615}
+
+
+Distance computing. 
+
+Compute the distance between a point and the blobbox
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+\hypertarget{class_blob_box_a77db706ca8bf91da6875b92db33bbcc5}{
+\index{BlobBox@{BlobBox}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!BlobBox@{BlobBox}}
+\subsubsection[{Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double BlobBox::Intensity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_blob_box_a77db706ca8bf91da6875b92db33bbcc5}
+
+
+Intensity computing. 
+
+Compute the point intensity
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & : the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_blob_node_a4987f9060e9141647c514efd9859d0ba}{BlobNode}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{blobbox_8h}{blobbox.h}\item 
+blobbox.cpp\end{DoxyCompactItemize}
